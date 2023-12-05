@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Barebone", "Barebone\Barebo
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Sandbox", "Sandbox\Sandbox.vcxproj", "{F45FB377-4D93-4A10-B56A-2A37A15E5F70}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Main", "Main\Main.vcxproj", "{F3EC4B81-D0F3-4FD1-BB20-BF9ED3068406}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +33,14 @@ Global
 		{F45FB377-4D93-4A10-B56A-2A37A15E5F70}.Release|x64.Build.0 = Release|x64
 		{F45FB377-4D93-4A10-B56A-2A37A15E5F70}.Release|x86.ActiveCfg = Release|Win32
 		{F45FB377-4D93-4A10-B56A-2A37A15E5F70}.Release|x86.Build.0 = Release|Win32
+		{F3EC4B81-D0F3-4FD1-BB20-BF9ED3068406}.Debug|x64.ActiveCfg = Debug|x64
+		{F3EC4B81-D0F3-4FD1-BB20-BF9ED3068406}.Debug|x64.Build.0 = Debug|x64
+		{F3EC4B81-D0F3-4FD1-BB20-BF9ED3068406}.Debug|x86.ActiveCfg = Debug|Win32
+		{F3EC4B81-D0F3-4FD1-BB20-BF9ED3068406}.Debug|x86.Build.0 = Debug|Win32
+		{F3EC4B81-D0F3-4FD1-BB20-BF9ED3068406}.Release|x64.ActiveCfg = Release|x64
+		{F3EC4B81-D0F3-4FD1-BB20-BF9ED3068406}.Release|x64.Build.0 = Release|x64
+		{F3EC4B81-D0F3-4FD1-BB20-BF9ED3068406}.Release|x86.ActiveCfg = Release|Win32
+		{F3EC4B81-D0F3-4FD1-BB20-BF9ED3068406}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
