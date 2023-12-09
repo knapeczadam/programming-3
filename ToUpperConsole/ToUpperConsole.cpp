@@ -22,6 +22,14 @@ char ToUpper(char c)
 }
 #endif
 
+void ToUpper(char* str)
+{
+   for (int i = 0; str[i] != '\0'; ++i)
+   {
+       str[i] = ToUpper(str[i]);
+   } 
+}
+
 int main()
 {
     std::cout << "Enter a string: ";
@@ -48,6 +56,11 @@ int main()
     {
         std::cout << std::toupper(c, std::locale());
     }
+    //-------------------------------------------------------------------------
+    std::cout << '\n';
+    char cstr[] = "Hello, World!";
+    ToUpper(cstr);
+    std::cout << "Using ToUpper(cstr): " << cstr << '\n';
 
     std::cin.get();
     return 0; 
