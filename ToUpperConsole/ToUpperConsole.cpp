@@ -48,4 +48,7 @@ int main()
     {
         std::cout << std::toupper(c, std::locale());
     }
+
+    std::cin.get();
+    return 0; 
 }

@@ -3,8 +3,10 @@
 
 #if defined(UNICODE) or defined(_UNICODE)
     #define tcout std::wcout
+    #define tcin std::wcin
 #else
     #define tcout std::cout
+    #define tcin std::cin
 #endif
 
 int _tmain(int argc, TCHAR* argv[])
@@ -15,4 +17,7 @@ int _tmain(int argc, TCHAR* argv[])
     std::cout << "int main(int argc, char* argv[])" << '\n';
 #endif
     tcout << _T("size of TCHAR: ") << sizeof(TCHAR);
+    
+    tcin.get();
+    return 0;
 }

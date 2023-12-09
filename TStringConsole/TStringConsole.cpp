@@ -24,4 +24,7 @@ int _tmain(int argc, TCHAR* argv[])
     print << _T("Hello ") << name.c_str() << _T("!\n");
     print << _T("PI = ") << std::setprecision(4) << std::fixed << PI << _T("\n");
     tcout << print.str();
+
+    tcin.get();
+    return 0;
 }

@@ -85,4 +85,7 @@ int main()
     std::u8string s5 = u8"Hello";
     std::u16string s6 = u"Hello";
     std::u32string s7 = U"Hello";
+
+    std::cin.get();
+    return 0;
 }
