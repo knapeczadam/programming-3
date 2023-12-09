@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{9cfc320b-ac34-4769-bda6-9b2636a80539}</ProjectGuid>
-    <RootNamespace>TString</RootNamespace>
+    <ProjectGuid>{06187d3b-e8e9-486c-ab04-a2be8e7554f5}</ProjectGuid>
+    <RootNamespace>TString32</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -130,17 +130,17 @@
     <ClInclude Include="framework.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="targetver.h" />
-    <ClInclude Include="TString.h" />
+    <ClInclude Include="TString32.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="TString.cpp" />
+    <ClCompile Include="TString32.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="TString.rc" />
+    <ResourceCompile Include="TString32.rc" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="small.ico" />
-    <Image Include="TString.ico" />
+    <Image Include="TString32.ico" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

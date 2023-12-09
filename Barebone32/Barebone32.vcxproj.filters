@@ -24,17 +24,17 @@
     <ClInclude Include="Resource.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Barebone.h">
+    <ClInclude Include="Barebone32.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Barebone.cpp">
+    <ClCompile Include="Barebone32.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="Barebone.rc">
+    <ResourceCompile Include="Barebone32.rc">
       <Filter>Resource Files</Filter>
     </ResourceCompile>
   </ItemGroup>
@@ -42,7 +42,7 @@
     <Image Include="small.ico">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="Barebone.ico">
+    <Image Include="Barebone32.ico">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>

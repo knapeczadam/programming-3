@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{4cae379f-7929-4e56-8c8b-dc2d5c781ece}</ProjectGuid>
-    <RootNamespace>Barebone</RootNamespace>
+    <ProjectGuid>{e1f03e51-5f9a-4c3b-aebb-a58fe5fedc94}</ProjectGuid>
+    <RootNamespace>Barebone32</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -127,19 +127,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Barebone.h" />
+    <ClInclude Include="Barebone32.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Barebone.cpp" />
+    <ClCompile Include="Barebone32.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="Barebone.rc" />
+    <ResourceCompile Include="Barebone32.rc" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="Barebone.ico" />
+    <Image Include="Barebone32.ico" />
     <Image Include="small.ico" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
