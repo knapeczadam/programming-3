@@ -4,6 +4,8 @@
 #include "framework.h"
 #include "Main32.h"
 
+#include <iostream>
+
 #define MAX_LOADSTRING 100
 
 // Global Variables:
@@ -23,22 +25,18 @@ BOOL                InitInstance(HINSTANCE, int);
 LRESULT CALLBACK    WndProc(HWND, UINT, WPARAM, LPARAM);
 INT_PTR CALLBACK    About(HWND, UINT, WPARAM, LPARAM);
 
-// Check if the program is running in Unicode or Multi-Byte Character Set
+// Generic WinMain
 //-----------------------------------------------------------------------------
-#if defined(UNICODE) || defined(_UNICODE)
-int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
-                      _In_opt_ HINSTANCE hPrevInstance,
-                      _In_ LPWSTR lpCmdLine,
-                      _In_ int nCmdShow)
-#else
-int APIENTRY WinMain(_In_ HINSTANCE hInstance,
-                    _In_opt_ HINSTANCE hPrevInstance,
-                    _In_ LPSTR    lpCmdLine,
-                    _In_ int       nCmdShow)
-#endif
-//-----------------------------------------------------------------------------
-
+int      APIENTRY  _tWinMain(_In_     HINSTANCE hInstance,
+                             _In_opt_ HINSTANCE hPrevInstance,
+                             _In_     LPTSTR    lpCmdLine,
+                             _In_     int       nCmdShow)
 {
+    // This is a test to see if the compiler is using Unicode or Multi-Byte
+    //-------------------------------------------------------------------------
+    size_t size = sizeof(*lpCmdLine);
+    std::cout << "size of LPTSTR: " << size << std::flush;
+    
     UNREFERENCED_PARAMETER(hPrevInstance);
     UNREFERENCED_PARAMETER(lpCmdLine);
 
