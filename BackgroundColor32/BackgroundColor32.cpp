@@ -64,7 +64,7 @@ int APIENTRY _tWinMain(_In_ HINSTANCE hInstance,
 //
 ATOM MyRegisterClass(HINSTANCE hInstance)
 {
-    WNDCLASSEXW wcex;
+    WNDCLASSEX wcex;
 
     wcex.cbSize = sizeof(WNDCLASSEX);
 
