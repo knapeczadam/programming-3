@@ -125,6 +125,15 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
     switch (message)
     {
+    case WM_CREATE:
+        {
+            const int userClicked = MessageBox(hWnd, _T("Do you want to close the application?"), _T("Hello"), MB_OKCANCEL);
+            if (userClicked == IDOK)
+            {
+                DestroyWindow(hWnd);
+                break;
+            }
+        }
     case WM_COMMAND:
         {
             int wmId = LOWORD(wParam);

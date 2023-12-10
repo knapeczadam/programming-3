@@ -149,6 +149,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
     {
     case WM_CREATE:
         SetWindowText(hWnd, GetShowParameter(g_nCmdShow));
+        break;
     case WM_COMMAND:
         {
             int wmId = LOWORD(wParam);
