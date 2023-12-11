@@ -51,6 +51,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RandomCursor32", "RandomCur
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DrawDiagonal32", "DrawDiagonal32\DrawDiagonal32.vcxproj", "{99DA0D5E-9870-41EA-8D92-2A616AAA67F8}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DrawEllipse32", "DrawEllipse32\DrawEllipse32.vcxproj", "{67ABB9D8-3B10-415E-A792-09C1BA5158D2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -251,6 +253,14 @@ Global
 		{99DA0D5E-9870-41EA-8D92-2A616AAA67F8}.Release|x64.Build.0 = Release|x64
 		{99DA0D5E-9870-41EA-8D92-2A616AAA67F8}.Release|x86.ActiveCfg = Release|Win32
 		{99DA0D5E-9870-41EA-8D92-2A616AAA67F8}.Release|x86.Build.0 = Release|Win32
+		{67ABB9D8-3B10-415E-A792-09C1BA5158D2}.Debug|x64.ActiveCfg = Debug|x64
+		{67ABB9D8-3B10-415E-A792-09C1BA5158D2}.Debug|x64.Build.0 = Debug|x64
+		{67ABB9D8-3B10-415E-A792-09C1BA5158D2}.Debug|x86.ActiveCfg = Debug|Win32
+		{67ABB9D8-3B10-415E-A792-09C1BA5158D2}.Debug|x86.Build.0 = Debug|Win32
+		{67ABB9D8-3B10-415E-A792-09C1BA5158D2}.Release|x64.ActiveCfg = Release|x64
+		{67ABB9D8-3B10-415E-A792-09C1BA5158D2}.Release|x64.Build.0 = Release|x64
+		{67ABB9D8-3B10-415E-A792-09C1BA5158D2}.Release|x86.ActiveCfg = Release|Win32
+		{67ABB9D8-3B10-415E-A792-09C1BA5158D2}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
