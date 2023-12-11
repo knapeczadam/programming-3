@@ -148,9 +148,18 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
             RECT rect;
             HDC hdc = BeginPaint(hWnd, &ps);
 
+            // Create a red pen
+            HPEN hPen = CreatePen(PS_DASH, 1, RGB(255, 0, 0));
+            HPEN hOldPen = (HPEN)SelectObject(hdc, hPen);
+
+            // Draw a diagonal line
             GetClientRect(hWnd, &rect);
             MoveToEx(hdc, 0, 0, NULL);
             LineTo(hdc, rect.right, rect.bottom);
+
+            // Clean up
+            SelectObject(hdc, hOldPen);
+            DeleteObject(hPen);
             
             EndPaint(hWnd, &ps);
         }
