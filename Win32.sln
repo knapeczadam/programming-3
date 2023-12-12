@@ -57,6 +57,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SaveBitmapToFile32", "SaveB
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ActiveInactive32", "ActiveInactive32\ActiveInactive32.vcxproj", "{A5BC1891-6FB7-476A-A893-955D46A0ACAB}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OutputDebugString32", "OutputDebugString32\OutputDebugString32.vcxproj", "{B5D24808-9FE6-4CCD-B50D-4AAC77B31552}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -281,6 +283,14 @@ Global
 		{A5BC1891-6FB7-476A-A893-955D46A0ACAB}.Release|x64.Build.0 = Release|x64
 		{A5BC1891-6FB7-476A-A893-955D46A0ACAB}.Release|x86.ActiveCfg = Release|Win32
 		{A5BC1891-6FB7-476A-A893-955D46A0ACAB}.Release|x86.Build.0 = Release|Win32
+		{B5D24808-9FE6-4CCD-B50D-4AAC77B31552}.Debug|x64.ActiveCfg = Debug|x64
+		{B5D24808-9FE6-4CCD-B50D-4AAC77B31552}.Debug|x64.Build.0 = Debug|x64
+		{B5D24808-9FE6-4CCD-B50D-4AAC77B31552}.Debug|x86.ActiveCfg = Debug|Win32
+		{B5D24808-9FE6-4CCD-B50D-4AAC77B31552}.Debug|x86.Build.0 = Debug|Win32
+		{B5D24808-9FE6-4CCD-B50D-4AAC77B31552}.Release|x64.ActiveCfg = Release|x64
+		{B5D24808-9FE6-4CCD-B50D-4AAC77B31552}.Release|x64.Build.0 = Release|x64
+		{B5D24808-9FE6-4CCD-B50D-4AAC77B31552}.Release|x86.ActiveCfg = Release|Win32
+		{B5D24808-9FE6-4CCD-B50D-4AAC77B31552}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
