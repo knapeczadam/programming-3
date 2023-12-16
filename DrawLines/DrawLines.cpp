@@ -4,6 +4,10 @@
 #include "framework.h"
 #include "DrawLines.h"
 
+#include <vector>
+
+std::vector<POINT> points;
+
 #define MAX_LOADSTRING 100
 
 // Global Variables:
@@ -125,7 +129,23 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
     switch (message)
     {
-        OutputDebugString(L"WndProc\n");
+    case WM_LBUTTONDOWN:
+        {
+            points.push_back({ LOWORD(lParam), HIWORD(lParam) });
+            for (auto& p : points)
+            {
+                TCHAR buf[100];
+                wsprintf(buf, TEXT("x: %d, y: %d\n"), p.x, p.y);
+                OutputDebugString(buf);
+            }
+        }
+        InvalidateRect(hWnd, NULL, TRUE);
+        break;
+    case WM_RBUTTONDOWN:
+        {
+            points.clear();
+            InvalidateRect(hWnd, NULL, TRUE);
+        }
     case WM_COMMAND:
         {
             int wmId = LOWORD(wParam);
@@ -147,7 +167,35 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
         {
             PAINTSTRUCT ps;
             HDC hdc = BeginPaint(hWnd, &ps);
-            // TODO: Add any drawing code that uses hdc here...
+            
+            HPEN hRedPen = CreatePen(PS_SOLID, 1, RGB(255, 0, 0));
+            HPEN hBlackPen = CreatePen(PS_SOLID, 1, RGB(0, 0, 0));
+            HPEN oldPen = (HPEN)SelectObject(hdc, hBlackPen);
+            LONG radius = 5;
+            
+            // draw lines
+            if (points.size() > 1)
+            {
+                oldPen = (HPEN)SelectObject(hdc, hBlackPen);
+                MoveToEx(hdc, points[0].x, points[0].y, NULL);
+                // red color for the cirle
+                oldPen = (HPEN)SelectObject(hdc, hRedPen); 
+                Ellipse(hdc, points[0].x - radius, points[0].y - radius, points[0].x + radius, points[0].y + radius);
+                for (int i = 1; i < points.size(); ++i)
+                {
+                    // black for the line
+                    oldPen = (HPEN)SelectObject(hdc, hBlackPen);
+                    LineTo(hdc, points[i].x, points[i].y);
+                    // red color for the cirle
+                    oldPen = (HPEN)SelectObject(hdc, hRedPen);
+                    Ellipse(hdc, points[i].x - radius, points[i].y - radius, points[i].x + radius, points[i].y + radius);
+                }
+            }
+            // Delete resources
+            SelectObject(hdc, oldPen);
+            DeleteObject(hRedPen);
+            DeleteObject(hBlackPen);
+            
             EndPaint(hWnd, &ps);
         }
         break;
