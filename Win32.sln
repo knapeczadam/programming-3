@@ -57,9 +57,11 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SaveBitmapToFile32", "SaveB
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ActiveInactive32", "ActiveInactive32\ActiveInactive32.vcxproj", "{A5BC1891-6FB7-476A-A893-955D46A0ACAB}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DrawLines", "DrawLines\DrawLines.vcxproj", "{4D535B7F-34A7-4377-B40F-D6F57635CCBB}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DrawLines32", "DrawLines\DrawLines.vcxproj", "{4D535B7F-34A7-4377-B40F-D6F57635CCBB}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OutputDebugString32", "OutputDebugString32\OutputDebugString32.vcxproj", "{B5D24808-9FE6-4CCD-B50D-4AAC77B31552}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DrawPentagram32", "DrawPentagram32\DrawPentagram32.vcxproj", "{ADD774C3-3792-4622-8B3F-B6BBBBF7BE00}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -301,6 +303,14 @@ Global
 		{B5D24808-9FE6-4CCD-B50D-4AAC77B31552}.Release|x64.Build.0 = Release|x64
 		{B5D24808-9FE6-4CCD-B50D-4AAC77B31552}.Release|x86.ActiveCfg = Release|Win32
 		{B5D24808-9FE6-4CCD-B50D-4AAC77B31552}.Release|x86.Build.0 = Release|Win32
+		{ADD774C3-3792-4622-8B3F-B6BBBBF7BE00}.Debug|x64.ActiveCfg = Debug|x64
+		{ADD774C3-3792-4622-8B3F-B6BBBBF7BE00}.Debug|x64.Build.0 = Debug|x64
+		{ADD774C3-3792-4622-8B3F-B6BBBBF7BE00}.Debug|x86.ActiveCfg = Debug|Win32
+		{ADD774C3-3792-4622-8B3F-B6BBBBF7BE00}.Debug|x86.Build.0 = Debug|Win32
+		{ADD774C3-3792-4622-8B3F-B6BBBBF7BE00}.Release|x64.ActiveCfg = Release|x64
+		{ADD774C3-3792-4622-8B3F-B6BBBBF7BE00}.Release|x64.Build.0 = Release|x64
+		{ADD774C3-3792-4622-8B3F-B6BBBBF7BE00}.Release|x86.ActiveCfg = Release|Win32
+		{ADD774C3-3792-4622-8B3F-B6BBBBF7BE00}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
