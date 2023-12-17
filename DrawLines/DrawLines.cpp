@@ -174,7 +174,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
             LONG radius = 5;
             
             // draw lines
-            if (points.size() > 1)
+            if (points.size() > 0)
             {
                 oldPen = (HPEN)SelectObject(hdc, hBlackPen);
                 MoveToEx(hdc, points[0].x, points[0].y, NULL);
