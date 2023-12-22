@@ -6,6 +6,18 @@
 
 #include <vector>
 #include <cmath>
+#include <string>
+#include <sstream>
+
+#if defined(UNICODE) or defined(_UNICODE)
+#define tstring std::wstring
+#define tstringstream std::wstringstream
+#define tstr std::to_wstring
+#else
+#define tstring std::string
+#define tstringstream std::stringstream
+#define tstr std::to_string
+#endif
 
 #define MAX_LOADSTRING 100
 
@@ -15,6 +27,7 @@ TCHAR szTitle[MAX_LOADSTRING];                  // The title bar text
 TCHAR szWindowClass[MAX_LOADSTRING];            // the main window class name
 std::vector<POINT> points;
 constexpr float gPI = 3.14159265358979323846f;
+int giNumOfPentagrams = 0;
 
 // Forward declarations of functions included in this code module:
 ATOM                MyRegisterClass(HINSTANCE hInstance);
@@ -136,13 +149,14 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
             pt.x = LOWORD(lParam);
             pt.y = HIWORD(lParam);
             points.push_back(pt);
-
+            ++giNumOfPentagrams;
             InvalidateRect(hWnd, NULL, TRUE);
         }
         break;
     case WM_RBUTTONDOWN:
         {
             points.clear();
+            giNumOfPentagrams = 0;
             InvalidateRect(hWnd, NULL, TRUE);
         }
         break;
@@ -214,6 +228,10 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
                     LineTo(hdc, static_cast<int>(toX), static_cast<int>(toY));
                 }
             }
+
+            tstringstream title;
+            title << _T("Pentagrams: ") << giNumOfPentagrams;
+            SendMessage(hWnd, WM_SETTEXT, 0, (LPARAM)title.str().c_str());
 
             // Delete pens
             DeleteObject(hPenRed);
