@@ -1,20 +1,47 @@
-// ExamPrepQuestion3Console.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
+#include <algorithm>
 #include <iostream>
+#include <string>
+#include <vector>
+
+class StringTooShortException{};
+
+bool MyPredicate(const std::string& str, int repeat1, int repeat2)
+{
+    if (repeat1 * repeat2 > str.length())
+        throw StringTooShortException();
+    // int counts[str.size()] = {};
+    std::vector<int> counts(str.size());
+    for (int i = 0, j = 0; i < str.length();++j)
+    {
+        const char c = str[i];
+        counts[j] = 1;
+        while (c == str[++i])
+        {
+            counts[j]++;
+        }
+    }
+    for (int i = 0; i < str.length(); ++i)
+    {
+        if (counts[i] == repeat2)
+        {
+            bool found = true;
+            for (int j = 0, k = i + 1; j < repeat1 - 1 and k < str.length(); ++j, ++k)
+            {
+                if (counts[k] != repeat2)
+                {
+                    found = false;
+                    break;
+                }
+            }
+            if (found) return true;
+        }
+    }
+    return false;
+}
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    std::cout << MyPredicate("ZeeePPPooobbbccc", 5, 3) << '\n'; // true
+    std::cout << MyPredicate("ZeePeePoo", 3, 2) << '\n'; // false
+    // std::cout << MyPredicate("ZeeP", 3, 2); // exception
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
