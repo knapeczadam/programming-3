@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{6104d4d5-42ab-498d-bbd4-fde88678b3d1}</ProjectGuid>
-    <RootNamespace>SplitCharArrayConsole</RootNamespace>
+    <ProjectGuid>{49cc9c2f-c25f-4df4-812c-5114cbe5c387}</ProjectGuid>
+    <RootNamespace>DemoString2</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -127,7 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="SplitCharArrayConsole.cpp" />
+    <ClCompile Include="DemoString2.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

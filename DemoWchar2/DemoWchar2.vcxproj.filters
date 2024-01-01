@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="WcharDemo1Console.cpp">
+    <ClCompile Include="DemoWchar2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

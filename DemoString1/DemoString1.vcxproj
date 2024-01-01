@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{b67a74b9-e817-441f-9147-bf411691c730}</ProjectGuid>
-    <RootNamespace>WcharDemo1Console</RootNamespace>
+    <ProjectGuid>{59ee89f4-9c8a-4217-8224-8b4ae8ddb7cb}</ProjectGuid>
+    <RootNamespace>DemoString1</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -127,7 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="WcharDemo1Console.cpp" />
+    <ClCompile Include="DemoString1.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

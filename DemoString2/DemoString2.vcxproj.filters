@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="SplitCharArrayConsole.cpp">
+    <ClCompile Include="DemoString2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
