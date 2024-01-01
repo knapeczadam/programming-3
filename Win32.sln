@@ -3,29 +3,29 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34316.72
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Main32", "Main32\Main32.vcxproj", "{7A00721F-36FE-4F1F-B487-CE2497BFCB75}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MainWin32", "MainWin32\MainWin32.vcxproj", "{7A00721F-36FE-4F1F-B487-CE2497BFCB75}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MainConsole", "MainConsole\MainConsole.vcxproj", "{781D0EA3-0313-4A3B-908F-71B47469008B}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Barebone32", "Barebone32\Barebone32.vcxproj", "{E1F03E51-5F9A-4C3B-AEBB-A58FE5FEDC94}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BareboneWin32", "BareboneWin32\BareboneWin32.vcxproj", "{E1F03E51-5F9A-4C3B-AEBB-A58FE5FEDC94}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BareboneConsole", "BareboneConsole\BareboneConsole.vcxproj", "{B852A36B-3AC3-4FE2-862D-B2F3D2C9ED05}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TString32", "TString32\TString32.vcxproj", "{06187D3B-E8E9-486C-AB04-A2BE8E7554F5}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TStringWin32", "TStringWin32\TStringWin32.vcxproj", "{06187D3B-E8E9-486C-AB04-A2BE8E7554F5}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TStringConsole", "TStringConsole\TStringConsole.vcxproj", "{9613C36E-70F9-4EE1-876C-4B81E38C2BB5}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Sandbox32", "Sandbox32\Sandbox32.vcxproj", "{C79A1932-503A-46A2-B1F7-66DC8A757043}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SandboxWin32", "SandboxWin32\SandboxWin32.vcxproj", "{C79A1932-503A-46A2-B1F7-66DC8A757043}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SandboxConsole", "SandboxConsole\SandboxConsole.vcxproj", "{DD1BBFB1-0964-46DF-B2D4-9A442AB8ABA9}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MessageBox32", "MessageBox32\MessageBox32.vcxproj", "{9571062D-7892-4311-9B42-EFD7437F4BBF}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MessageBoxWin32", "MessageBoxWin32\MessageBoxWin32.vcxproj", "{9571062D-7892-4311-9B42-EFD7437F4BBF}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ToUpperConsole", "ToUpperConsole\ToUpperConsole.vcxproj", "{372DE627-08C1-42B8-B1EB-59273CE6A16B}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ToLowerConsole", "ToLowerConsole\ToLowerConsole.vcxproj", "{DD9F439F-DFF2-466F-8D47-E20EDE61A59A}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Strings", "Strings\Strings.vcxproj", "{87CF1A91-E2F6-4C59-A249-A9191D5023A2}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "StringsConsole", "StringsConsole\StringsConsole.vcxproj", "{87CF1A91-E2F6-4C59-A249-A9191D5023A2}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LengthConsole", "LengthConsole\LengthConsole.vcxproj", "{2C77E5E4-E847-4BA1-9BF0-A7E76ECF69D3}"
 EndProject
@@ -33,53 +33,53 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ArgumentVectorConsole", "Ar
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SubstringConsole", "SubstringConsole\SubstringConsole.vcxproj", "{47355F18-B6F8-429C-BF7B-3CC008C0F8AE}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TextOut32", "TextOut32\TextOut32.vcxproj", "{CE9ED2AF-81E0-407E-AFBF-007965156D62}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TextOutWin32", "TextOutWin32\TextOutWin32.vcxproj", "{CE9ED2AF-81E0-407E-AFBF-007965156D62}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CmdShow32", "CmdShow32\CmdShow32.vcxproj", "{AA6931F7-5C15-4D16-B7E3-02ACE3CE4300}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CmdShowWin32", "CmdShowWin32\CmdShowWin32.vcxproj", "{AA6931F7-5C15-4D16-B7E3-02ACE3CE4300}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BackgroundColor32", "BackgroundColor32\BackgroundColor32.vcxproj", "{69439DCE-87F1-4231-B752-283A0DD1A384}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BackgroundColorWin32", "BackgroundColorWin32\BackgroundColorWin32.vcxproj", "{69439DCE-87F1-4231-B752-283A0DD1A384}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RandomBackgroundColor32", "RandomBackgroundColor32\RandomBackgroundColor32.vcxproj", "{7ACC1E9B-4E1E-4AF6-90FF-B17D28C29F32}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RandomBackgroundColorWin32", "RandomBackgroundColorWin32\RandomBackgroundColorWin32.vcxproj", "{7ACC1E9B-4E1E-4AF6-90FF-B17D28C29F32}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ArgumentVector32", "ArgumentVector32\ArgumentVector32.vcxproj", "{902D381A-0C46-4901-88C8-F99F3ABA33E6}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ArgumentVectorWin32", "ArgumentVectorWin32\ArgumentVectorWin32.vcxproj", "{902D381A-0C46-4901-88C8-F99F3ABA33E6}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RandomXY32", "RandomXY32\RandomXY32.vcxproj", "{C23A50B5-9A7D-41ED-9AC0-32A8A2A26FBF}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RandomXYWin32", "RandomXYWin32\RandomXYWin32.vcxproj", "{C23A50B5-9A7D-41ED-9AC0-32A8A2A26FBF}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CursosPos32", "CursosPos32\CursosPos32.vcxproj", "{76C174E1-978E-4569-AA0A-E6D601B37E46}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CursosPosWin32", "CursosPosWin32\CursosPosWin32.vcxproj", "{76C174E1-978E-4569-AA0A-E6D601B37E46}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RandomCursor32", "RandomCursor32\RandomCursor32.vcxproj", "{27B64071-3DF4-4F19-9360-C4A0AE1A200A}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RandomCursorWin32", "RandomCursorWin32\RandomCursorWin32.vcxproj", "{27B64071-3DF4-4F19-9360-C4A0AE1A200A}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DrawDiagonal32", "DrawDiagonal32\DrawDiagonal32.vcxproj", "{99DA0D5E-9870-41EA-8D92-2A616AAA67F8}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DrawDiagonalWin32", "DrawDiagonalWin32\DrawDiagonalWin32.vcxproj", "{99DA0D5E-9870-41EA-8D92-2A616AAA67F8}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DrawEllipse32", "DrawEllipse32\DrawEllipse32.vcxproj", "{67ABB9D8-3B10-415E-A792-09C1BA5158D2}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DrawEllipseWin32", "DrawEllipseWin32\DrawEllipseWin32.vcxproj", "{67ABB9D8-3B10-415E-A792-09C1BA5158D2}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SaveBitmapToFile32", "SaveBitmapToFile32\SaveBitmapToFile32.vcxproj", "{01F22F56-1889-44E8-BC99-A7BAE07FAE7B}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SaveBitmapToFileWin32", "SaveBitmapToFileWin32\SaveBitmapToFileWin32.vcxproj", "{01F22F56-1889-44E8-BC99-A7BAE07FAE7B}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ActiveInactive32", "ActiveInactive32\ActiveInactive32.vcxproj", "{A5BC1891-6FB7-476A-A893-955D46A0ACAB}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ActiveInactiveWin32", "ActiveInactiveWin32\ActiveInactiveWin32.vcxproj", "{A5BC1891-6FB7-476A-A893-955D46A0ACAB}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DrawLines32", "DrawLines\DrawLines.vcxproj", "{4D535B7F-34A7-4377-B40F-D6F57635CCBB}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DrawLinesWin32", "DrawLinesWin32\DrawLinesWin32.vcxproj", "{4D535B7F-34A7-4377-B40F-D6F57635CCBB}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OutputDebugString32", "OutputDebugString32\OutputDebugString32.vcxproj", "{B5D24808-9FE6-4CCD-B50D-4AAC77B31552}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OutputDebugStringWin32", "OutputDebugStringWin32\OutputDebugStringWin32.vcxproj", "{B5D24808-9FE6-4CCD-B50D-4AAC77B31552}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DrawPentagram32", "DrawPentagram32\DrawPentagram32.vcxproj", "{ADD774C3-3792-4622-8B3F-B6BBBBF7BE00}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DrawPentagramWin32", "DrawPentagramWin32\DrawPentagramWin32.vcxproj", "{ADD774C3-3792-4622-8B3F-B6BBBBF7BE00}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MyEngine32", "MyEngine32\MyEngine32.vcxproj", "{A16F27F2-B41D-4970-B684-9D8AF7098210}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MyEngineWin32", "MyEngineWin32\MyEngineWin32.vcxproj", "{A16F27F2-B41D-4970-B684-9D8AF7098210}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ExamPrepQuestion1Console", "ExamPrepQuestion1Console\ExamPrepQuestion1Console.vcxproj", "{DD11AD10-894E-4D28-AD8C-E6A65B3809D8}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ExamPrepQuestion232", "ExamPrepQuestion232\ExamPrepQuestion232.vcxproj", "{85DDF967-D7AD-4D5B-89BA-CB3C22D71B02}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ExamPrepQuestion2Win32", "ExamPrepQuestion2Win32\ExamPrepQuestion2Win32.vcxproj", "{85DDF967-D7AD-4D5B-89BA-CB3C22D71B02}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ExamPrepQuestion3Console", "ExamPrepQuestion3Console\ExamPrepQuestion3Console.vcxproj", "{AFE8887A-3E60-4FC4-83C3-77B07537C375}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TransparentCircle32", "TransparentCircle32\TransparentCircle32.vcxproj", "{6E4FB7EB-3647-453E-873D-C990974C9D5C}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TransparentCircleWin32", "TransparentCircleWin32\TransparentCircleWin32.vcxproj", "{6E4FB7EB-3647-453E-873D-C990974C9D5C}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DemoString1", "DemoString1\DemoString1.vcxproj", "{59EE89F4-9C8A-4217-8224-8B4AE8DDB7CB}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DemoString1Console", "DemoString1Console\DemoString1Console.vcxproj", "{59EE89F4-9C8A-4217-8224-8B4AE8DDB7CB}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DemoString2", "DemoString2\DemoString2.vcxproj", "{49CC9C2F-C25F-4DF4-812C-5114CBE5C387}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DemoString2Console", "DemoString2Console\DemoString2Console.vcxproj", "{49CC9C2F-C25F-4DF4-812C-5114CBE5C387}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DemoWchar1", "DemoWchar1\DemoWchar1.vcxproj", "{27A4BBD8-826A-46CA-8184-2C0476424410}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DemoWchar1Console", "DemoWchar1Console\DemoWchar1Console.vcxproj", "{27A4BBD8-826A-46CA-8184-2C0476424410}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DemoWchar2", "DemoWchar2\DemoWchar2.vcxproj", "{74EEC6F3-E02B-4AD5-8405-EFAB37567375}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DemoWchar2Console", "DemoWchar2Console\DemoWchar2Console.vcxproj", "{74EEC6F3-E02B-4AD5-8405-EFAB37567375}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BareboneGE7", "BareboneGE7\BareboneGE7.vcxproj", "{2AB0B9EB-56A2-461A-81FB-7947B5CA8E69}"
 EndProject

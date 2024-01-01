@@ -95,7 +95,8 @@ ATOM MyRegisterClass(HINSTANCE hInstance)
     wcex.hInstance      = hInstance;
     wcex.hIcon          = LoadIcon(hInstance, MAKEINTRESOURCE(IDI_SANDBOX32));
     wcex.hCursor        = LoadCursor(nullptr, IDC_ARROW);
-    wcex.hbrBackground  = (HBRUSH)(COLOR_WINDOW+1);
+    // pink background
+    wcex.hbrBackground  = (HBRUSH)CreateSolidBrush(RGB(255, 0, 255));
     wcex.lpszMenuName   = MAKEINTRESOURCE(IDC_SANDBOX32);
     wcex.lpszClassName  = szWindowClass;
     wcex.hIconSm        = LoadIcon(wcex.hInstance, MAKEINTRESOURCE(IDI_SMALL));
@@ -174,8 +175,28 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
     case WM_PAINT:
         {
             PAINTSTRUCT ps;
+            RECT rect;
+            
             HDC hdc = BeginPaint(hWnd, &ps);
-            // TODO: Add any drawing code that uses hdc here...
+            GetClientRect(hWnd, &rect);
+
+            HPEN bluePen = CreatePen(PS_SOLID, 2, RGB(0, 0, 255));
+            HPEN oldPen = (HPEN)SelectObject(hdc, bluePen);
+
+            HBRUSH yellowBrush = CreateSolidBrush(RGB(255, 255, 0));
+            HBRUSH oldBrush = (HBRUSH)SelectObject(hdc, yellowBrush);
+
+            int thirdWidth = rect.right / 3;
+            int thirdHeight = rect.bottom / 3;
+
+            Ellipse (hdc, thirdWidth, thirdHeight, thirdWidth * 2, thirdHeight * 2);
+
+            SelectObject(hdc, oldBrush);
+            DeleteObject(yellowBrush);
+
+            SelectObject (hdc, oldPen);
+            DeleteObject(bluePen);
+            
             EndPaint(hWnd, &ps);
         }
         break;

@@ -13,3 +13,19 @@
 #include <malloc.h>
 #include <memory.h>
 #include <tchar.h>
+
+#include <string>
+#include <iostream>
+#include <sstream>
+
+#if defined(DEBUG) or defined(_DEBUG)
+#define tstring std::wstring
+#define tcout std::wcout
+#define tcin std::wcin
+#define tstringstream std::wstringstream
+#else
+#define tstring std::string
+#define tcout std::cout
+#define tcin std::cin
+#define tstringstream std::stringstream
+#endif
