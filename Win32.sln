@@ -115,6 +115,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DemoCalculatorSmartPointers
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DemoCallableObjectsConsole", "DemoCallableObjectsConsole\DemoCallableObjectsConsole.vcxproj", "{BB447E42-5854-4102-9BD8-68ECFBAD6F9B}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DemoMyOwnAlgorithmFunctionConsole", "DemoMyOwnAlgorithmFunctionConsole\DemoMyOwnAlgorithmFunctionConsole.vcxproj", "{2D4C688D-9BF0-43F4-8AB7-7E3988975242}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DemoSTLAlgorithmsConsole", "DemoSTLAlgorithmsConsole\DemoSTLAlgorithmsConsole.vcxproj", "{30B754D2-26F4-4974-8848-1C09FCF2FB96}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -571,6 +575,22 @@ Global
 		{BB447E42-5854-4102-9BD8-68ECFBAD6F9B}.Release|x64.Build.0 = Release|x64
 		{BB447E42-5854-4102-9BD8-68ECFBAD6F9B}.Release|x86.ActiveCfg = Release|Win32
 		{BB447E42-5854-4102-9BD8-68ECFBAD6F9B}.Release|x86.Build.0 = Release|Win32
+		{2D4C688D-9BF0-43F4-8AB7-7E3988975242}.Debug|x64.ActiveCfg = Debug|x64
+		{2D4C688D-9BF0-43F4-8AB7-7E3988975242}.Debug|x64.Build.0 = Debug|x64
+		{2D4C688D-9BF0-43F4-8AB7-7E3988975242}.Debug|x86.ActiveCfg = Debug|Win32
+		{2D4C688D-9BF0-43F4-8AB7-7E3988975242}.Debug|x86.Build.0 = Debug|Win32
+		{2D4C688D-9BF0-43F4-8AB7-7E3988975242}.Release|x64.ActiveCfg = Release|x64
+		{2D4C688D-9BF0-43F4-8AB7-7E3988975242}.Release|x64.Build.0 = Release|x64
+		{2D4C688D-9BF0-43F4-8AB7-7E3988975242}.Release|x86.ActiveCfg = Release|Win32
+		{2D4C688D-9BF0-43F4-8AB7-7E3988975242}.Release|x86.Build.0 = Release|Win32
+		{30B754D2-26F4-4974-8848-1C09FCF2FB96}.Debug|x64.ActiveCfg = Debug|x64
+		{30B754D2-26F4-4974-8848-1C09FCF2FB96}.Debug|x64.Build.0 = Debug|x64
+		{30B754D2-26F4-4974-8848-1C09FCF2FB96}.Debug|x86.ActiveCfg = Debug|Win32
+		{30B754D2-26F4-4974-8848-1C09FCF2FB96}.Debug|x86.Build.0 = Debug|Win32
+		{30B754D2-26F4-4974-8848-1C09FCF2FB96}.Release|x64.ActiveCfg = Release|x64
+		{30B754D2-26F4-4974-8848-1C09FCF2FB96}.Release|x64.Build.0 = Release|x64
+		{30B754D2-26F4-4974-8848-1C09FCF2FB96}.Release|x86.ActiveCfg = Release|Win32
+		{30B754D2-26F4-4974-8848-1C09FCF2FB96}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
