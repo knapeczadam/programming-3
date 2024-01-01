@@ -91,6 +91,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DemoMyApplicationWin32", "D
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DemoMyApplicationSingletonWin32", "DemoMyApplicationSingletonWin32\DemoMyApplicationSingletonWin32.vcxproj", "{9D6CF085-D64A-4767-ABD7-131114FC3F3A}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ButtonsAndTextboxesGE7", "ButtonsAndTextboxesGE7\ButtonsAndTextboxesGE7.vcxproj", "{3ED6FB78-D165-47F8-8CA1-4B77C746FD7E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -451,6 +453,14 @@ Global
 		{9D6CF085-D64A-4767-ABD7-131114FC3F3A}.Release|x64.Build.0 = Release|x64
 		{9D6CF085-D64A-4767-ABD7-131114FC3F3A}.Release|x86.ActiveCfg = Release|Win32
 		{9D6CF085-D64A-4767-ABD7-131114FC3F3A}.Release|x86.Build.0 = Release|Win32
+		{3ED6FB78-D165-47F8-8CA1-4B77C746FD7E}.Debug|x64.ActiveCfg = Debug|x64
+		{3ED6FB78-D165-47F8-8CA1-4B77C746FD7E}.Debug|x64.Build.0 = Debug|x64
+		{3ED6FB78-D165-47F8-8CA1-4B77C746FD7E}.Debug|x86.ActiveCfg = Debug|Win32
+		{3ED6FB78-D165-47F8-8CA1-4B77C746FD7E}.Debug|x86.Build.0 = Debug|Win32
+		{3ED6FB78-D165-47F8-8CA1-4B77C746FD7E}.Release|x64.ActiveCfg = Release|x64
+		{3ED6FB78-D165-47F8-8CA1-4B77C746FD7E}.Release|x64.Build.0 = Release|x64
+		{3ED6FB78-D165-47F8-8CA1-4B77C746FD7E}.Release|x86.ActiveCfg = Release|Win32
+		{3ED6FB78-D165-47F8-8CA1-4B77C746FD7E}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
