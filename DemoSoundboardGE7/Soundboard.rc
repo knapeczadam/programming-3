@@ -1,0 +1,20 @@
+//-----------------------------------------------------------------
+// Game Skeleton Resources
+// RC Source - X.rc - version 2011 v2_08
+//-----------------------------------------------------------------
+
+//-----------------------------------------------------------------
+// Include Files
+//-----------------------------------------------------------------
+#include "Resource.h"
+
+//-----------------------------------------------------------------
+// Icons
+//-----------------------------------------------------------------
+IDI_BIG       ICON         "big.ico"
+IDI_SMALL     ICON         "small.ico"
+
+IDB_SLIDER              BITMAP                  "slider.bmp"
+IDB_BUTTON                BITMAP                  "knop.bmp"
+IDB_LIGHTBAR            BITMAP                  "lichtbar.bmp"
+IDB_BG                  BITMAP                  "soundboard bg.bmp"
