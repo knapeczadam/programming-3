@@ -121,6 +121,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DemoSTLAlgorithmsConsole", 
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DemoFileSystemConsole", "DemoFileSystemConsole\DemoFileSystemConsole.vcxproj", "{05258BE7-836E-4AA0-8DAC-A649B7F3A5FF}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DetectShapeOnScreenGE7", "DetectShapeOnScreenGE7\DetectShapeOnScreenGE7.vcxproj", "{47446730-C569-46BC-8440-6B8FB1A49282}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -601,6 +603,14 @@ Global
 		{05258BE7-836E-4AA0-8DAC-A649B7F3A5FF}.Release|x64.Build.0 = Release|x64
 		{05258BE7-836E-4AA0-8DAC-A649B7F3A5FF}.Release|x86.ActiveCfg = Release|Win32
 		{05258BE7-836E-4AA0-8DAC-A649B7F3A5FF}.Release|x86.Build.0 = Release|Win32
+		{47446730-C569-46BC-8440-6B8FB1A49282}.Debug|x64.ActiveCfg = Debug|x64
+		{47446730-C569-46BC-8440-6B8FB1A49282}.Debug|x64.Build.0 = Debug|x64
+		{47446730-C569-46BC-8440-6B8FB1A49282}.Debug|x86.ActiveCfg = Debug|Win32
+		{47446730-C569-46BC-8440-6B8FB1A49282}.Debug|x86.Build.0 = Debug|Win32
+		{47446730-C569-46BC-8440-6B8FB1A49282}.Release|x64.ActiveCfg = Release|x64
+		{47446730-C569-46BC-8440-6B8FB1A49282}.Release|x64.Build.0 = Release|x64
+		{47446730-C569-46BC-8440-6B8FB1A49282}.Release|x86.ActiveCfg = Release|Win32
+		{47446730-C569-46BC-8440-6B8FB1A49282}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
