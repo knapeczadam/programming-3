@@ -75,7 +75,8 @@ private:
 	const COLORREF RGB_RED			{ RGB(255, 0, 0) };
 	const COLORREF RGB_DARKRED		{ RGB( 91, 0, 0) };
 
-	const unsigned int PIXEL_RED	{ 0xFFFF0000 };
+	// const unsigned int COLOR_TO_COMPARE{ 0xFFFF0000 };
+	const unsigned int COLOR_TO_COMPARE	{ 0xFF10F77D };
 
 	// -------------------------
 	// Datamembers

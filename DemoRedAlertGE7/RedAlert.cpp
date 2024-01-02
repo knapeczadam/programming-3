@@ -90,18 +90,32 @@ void RedAlert::Tick()
 
 bool RedAlert::DetectRed()
 {
-	unsigned int* line1Ptr{ m_ViewDataUPtr.get() };
-	unsigned int* line2Ptr{ line1Ptr + m_ViewWidth };
-	unsigned int* line3Ptr{ line1Ptr + m_ViewWidth * 2 };
-	unsigned int* line4Ptr{ line1Ptr + m_ViewWidth * 3 };
-	unsigned int* line5Ptr{ line1Ptr + m_ViewWidth * 4 };
+    unsigned int* line1Ptr{ m_ViewDataUPtr.get() };
+    unsigned int* line2Ptr{ line1Ptr + m_ViewWidth };
+    unsigned int* line3Ptr{ line1Ptr + m_ViewWidth * 2 };
+    unsigned int* line4Ptr{ line1Ptr + m_ViewWidth * 3 };
+    unsigned int* line5Ptr{ line1Ptr + m_ViewWidth * 4 };
 
-	for (int countPixels{}; countPixels < m_ViewWidth * m_ViewHeight; ++countPixels)
-	{
-		if (m_ViewDataUPtr[countPixels] == PIXEL_RED) return true;
-	}
+    for (int countPixels{}; countPixels < m_ViewWidth * m_ViewHeight; ++countPixels)
+    {
+        // Conversion is automatically done
+        // COLOR_TO_COMPARE is stored as ARGB = 0xFFFF0000
+        // Color is stored in memory as BB GG RR AA = little endian
+        // BGRA8888 
+        // https://en.wikipedia.org/wiki/RGBA_color_model
+        if (m_ViewDataUPtr[countPixels] == COLOR_TO_COMPARE)
+        {
+            auto currentPixel = m_ViewDataUPtr[countPixels];
+            auto alpha = currentPixel >> 24;
+            auto red = (currentPixel >> 16) & 0xFF;
+            auto green = (currentPixel >> 8) & 0xFF;
+            auto blue = currentPixel & 0xFF;
+            return true;
+        }
 
-	return false;
+    }
+
+    return false;
 }
 
 void RedAlert::MouseButtonAction(bool isLeft, bool isDown, int x, int y, WPARAM wParam)
