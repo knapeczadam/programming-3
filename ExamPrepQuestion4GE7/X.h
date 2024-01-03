@@ -12,6 +12,7 @@
 #include "Resource.h"	
 #include "GameEngine.h"
 #include "AbstractGame.h"
+#include <optional>
 
 //-----------------------------------------------------------------
 // X Class																

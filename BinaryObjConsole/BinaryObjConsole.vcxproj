@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{a3dc34d5-9d6a-4863-90bb-8ea926b4707d}</ProjectGuid>
-    <RootNamespace>BinaryReaderWriterConsole</RootNamespace>
+    <ProjectGuid>{d7543911-a5de-487c-95fb-68435e75e234}</ProjectGuid>
+    <RootNamespace>BinaryObjConsole</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -128,7 +128,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="BinaryReaderWriterConsole.cpp" />
+    <ClCompile Include="BinaryObjConsole.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
