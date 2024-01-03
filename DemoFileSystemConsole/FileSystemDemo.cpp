@@ -18,10 +18,12 @@ struct Float3f {
 };
 
 void example1() {
-	std::string pod = std::is_pod<Float3f>() == 1 ? "yes" : "no";
+	// std::string pod = std::is_pod<Float3f>() == 1 ? "yes" : "no";
+	std::string pod = std::is_trivially_copyable<Float3f>() == 1 ? "yes" : "no";
 	std::cout << "Is a Float3 struct a pod: " << pod << std::endl;
 
-	pod = std::is_pod<std::string>() == 1 ? "yes" : "no";
+	// pod = std::is_pod<std::string>() == 1 ? "yes" : "no";
+	pod = std::is_trivially_copyable<std::string>() == 1 ? "yes" : "no";
 	std::cout << "Is a std::string a pod: " << pod << std::endl;
 
 	Float3f toWrite;
