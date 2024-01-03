@@ -49,21 +49,21 @@ void X::Initialize(HINSTANCE hInstance)
 void X::Start()
 {
 	// Insert the code that needs to be executed at the start of the game
-	m_BtnUniquePtr = new Button(_T("Unique"));
-	m_BtnUniquePtr->SetBounds(25, 120, 80, 25);
-	m_BtnUniquePtr->AddActionListener(this);
-	m_BtnUniquePtr->Show();
+	m_BtnUniqueUPtr = std::make_unique<Button>(_T("Unique"));
+	m_BtnUniqueUPtr->SetBounds(25, 120, 80, 25);
+	m_BtnUniqueUPtr->AddActionListener(this);
+	m_BtnUniqueUPtr->Show();
 
-	m_BtnGreaterPtr = new Button(_T("Greater"));
-	m_BtnGreaterPtr->SetBounds(25, 150, 80, 25);
-	m_BtnGreaterPtr->AddActionListener(this);
-	m_BtnGreaterPtr->Show();
+	m_BtnGreaterUPtr = std::make_unique<Button>(_T("Greater"));
+	m_BtnGreaterUPtr->SetBounds(25, 150, 80, 25);
+	m_BtnGreaterUPtr->AddActionListener(this);
+	m_BtnGreaterUPtr->Show();
 
-	m_TxtEmptyPtr = new TextBox();
-	m_TxtEmptyPtr->SetBounds(25, 25, 100, 25);
-	m_TxtEmptyPtr->Show();
+	m_TxtUPtr = std::make_unique<TextBox>();
+	m_TxtUPtr->SetBounds(25, 25, 100, 25);
+	m_TxtUPtr->Show();
 
-	m_FontPtr = new Font(_T("Verdana"), false, false, false, 25);
+	m_FontUPtr = std::make_unique<Font>(_T("Verdana"), false, false, false, 25);
 
 	ReadDataFromFile();
 }
@@ -71,10 +71,6 @@ void X::Start()
 void X::End()
 {
 	// Insert the code that needs to be executed at the closing of the game
-	delete m_BtnUniquePtr;
-	delete m_BtnGreaterPtr;
-	delete m_TxtEmptyPtr;
-	delete m_FontPtr;
 }
 
 void X::Paint(RECT rect)
@@ -82,7 +78,7 @@ void X::Paint(RECT rect)
 	// Insert paint code
 	GAME_ENGINE->DrawSolidBackground(RGB(127, 127, 127));
 
-	GAME_ENGINE->SetFont(m_FontPtr);
+	GAME_ENGINE->SetFont(m_FontUPtr.get());
 	GAME_ENGINE->SetColor(RGB(255, 255, 255));
 
 	GAME_ENGINE->DrawString(m_Message, 25, 200);
@@ -177,7 +173,7 @@ void X::KeyPressed(TCHAR cKey)
 void X::CallAction(Caller* callerPtr)
 {
 	// Insert the code that needs to be executed when a Caller has to perform an action
-	if (callerPtr == m_BtnUniquePtr) {
+	if (callerPtr == m_BtnUniqueUPtr.get()) {
         // do something
 		m_Message = _T("");
 		tstringstream buffer;
@@ -190,7 +186,7 @@ void X::CallAction(Caller* callerPtr)
 		m_Message = buffer.str();
 		
     }
-    else if (callerPtr == m_BtnGreaterPtr) {
+    else if (callerPtr == m_BtnGreaterUPtr.get()) {
         // do something else
     	// read number from the textbox
     	// accept only numbers
@@ -198,7 +194,7 @@ void X::CallAction(Caller* callerPtr)
     	// start
     	m_Message = _T("");
     	tstringstream buffer;
-		auto [isNumber, pair] = IsNumber(m_TxtEmptyPtr->GetText());
+		auto [isNumber, pair] = IsNumber(m_TxtUPtr->GetText());
     	if (isNumber) {
     		auto number = pair.first.has_value() ? pair.first.value() : pair.second.value();
 			// count numbers greater than number

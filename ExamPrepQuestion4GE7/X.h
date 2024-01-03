@@ -60,12 +60,12 @@ private:
 	// -------------------------
 	// Datamembers
 	// -------------------------
-	Button* m_BtnUniquePtr = nullptr;
-	Button* m_BtnGreaterPtr = nullptr;
+	std::unique_ptr<Button> m_BtnUniqueUPtr;
+	std::unique_ptr<Button> m_BtnGreaterUPtr;
 
-	TextBox* m_TxtEmptyPtr = nullptr;
+	std::unique_ptr<TextBox> m_TxtUPtr;
 
-	Font* m_FontPtr = nullptr;
+	std::unique_ptr<Font> m_FontUPtr;
 
 	std::vector<int> m_VecIntegers;
 
