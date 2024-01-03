@@ -127,6 +127,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ExamPrepQuestion4GE7", "Exa
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DemoEndianTestConsole", "DemoEndianTestConsole\DemoEndianTestConsole.vcxproj", "{00FF531D-FFF8-4FF0-BDC9-BF358E401246}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BinaryReaderWriterConsole", "BinaryReaderWriterConsole\BinaryReaderWriterConsole.vcxproj", "{A3DC34D5-9D6A-4863-90BB-8EA926B4707D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -631,6 +633,14 @@ Global
 		{00FF531D-FFF8-4FF0-BDC9-BF358E401246}.Release|x64.Build.0 = Release|x64
 		{00FF531D-FFF8-4FF0-BDC9-BF358E401246}.Release|x86.ActiveCfg = Release|Win32
 		{00FF531D-FFF8-4FF0-BDC9-BF358E401246}.Release|x86.Build.0 = Release|Win32
+		{A3DC34D5-9D6A-4863-90BB-8EA926B4707D}.Debug|x64.ActiveCfg = Debug|x64
+		{A3DC34D5-9D6A-4863-90BB-8EA926B4707D}.Debug|x64.Build.0 = Debug|x64
+		{A3DC34D5-9D6A-4863-90BB-8EA926B4707D}.Debug|x86.ActiveCfg = Debug|Win32
+		{A3DC34D5-9D6A-4863-90BB-8EA926B4707D}.Debug|x86.Build.0 = Debug|Win32
+		{A3DC34D5-9D6A-4863-90BB-8EA926B4707D}.Release|x64.ActiveCfg = Release|x64
+		{A3DC34D5-9D6A-4863-90BB-8EA926B4707D}.Release|x64.Build.0 = Release|x64
+		{A3DC34D5-9D6A-4863-90BB-8EA926B4707D}.Release|x86.ActiveCfg = Release|Win32
+		{A3DC34D5-9D6A-4863-90BB-8EA926B4707D}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
