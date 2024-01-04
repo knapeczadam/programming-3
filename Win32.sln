@@ -73,65 +73,65 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ExamPrepQuestion3Console", 
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TransparentCircleWin32", "TransparentCircleWin32\TransparentCircleWin32.vcxproj", "{6E4FB7EB-3647-453E-873D-C990974C9D5C}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DemoString1Console", "DemoString1Console\DemoString1Console.vcxproj", "{59EE89F4-9C8A-4217-8224-8B4AE8DDB7CB}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Demo02String1Console", "Demo02String1Console\Demo02String1Console.vcxproj", "{59EE89F4-9C8A-4217-8224-8B4AE8DDB7CB}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DemoString2Console", "DemoString2Console\DemoString2Console.vcxproj", "{49CC9C2F-C25F-4DF4-812C-5114CBE5C387}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Demo02String2Console", "Demo02String2Console\Demo02String2Console.vcxproj", "{49CC9C2F-C25F-4DF4-812C-5114CBE5C387}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DemoWchar1Console", "DemoWchar1Console\DemoWchar1Console.vcxproj", "{27A4BBD8-826A-46CA-8184-2C0476424410}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Demo02Wchar1Console", "Demo02Wchar1Console\Demo02Wchar1Console.vcxproj", "{27A4BBD8-826A-46CA-8184-2C0476424410}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DemoWchar2Console", "DemoWchar2Console\DemoWchar2Console.vcxproj", "{74EEC6F3-E02B-4AD5-8405-EFAB37567375}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Demo02Wchar2Console", "Demo02Wchar2Console\Demo02Wchar2Console.vcxproj", "{74EEC6F3-E02B-4AD5-8405-EFAB37567375}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BareboneGE7", "BareboneGE7\BareboneGE7.vcxproj", "{2AB0B9EB-56A2-461A-81FB-7947B5CA8E69}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DemoSoundboardGE7", "DemoSoundboardGE7\DemoSoundboardGE7.vcxproj", "{9D81065E-E98E-44E6-9A67-3272A1F5DCA2}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Demo03SoundboardGE7", "Demo03SoundboardGE7\Demo03SoundboardGE7.vcxproj", "{9D81065E-E98E-44E6-9A67-3272A1F5DCA2}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DemoMyFirstApplicationWin32", "DemoMyFirstApplicationWin32\DemoMyFirstApplicationWin32.vcxproj", "{E9421761-E2BA-4755-92E8-8775DA435160}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Demo04MyFirstApplicationWin32", "Demo04MyFirstApplicationWin32\Demo04MyFirstApplicationWin32.vcxproj", "{E9421761-E2BA-4755-92E8-8775DA435160}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DemoMyApplicationWin32", "DemoMyApplicationWin32\DemoMyApplicationWin32.vcxproj", "{F2AEEF21-5877-45C7-B26A-940F3708E08E}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Demo04MyApplicationWin32", "Demo04MyApplicationWin32\Demo04MyApplicationWin32.vcxproj", "{F2AEEF21-5877-45C7-B26A-940F3708E08E}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DemoMyApplicationSingletonWin32", "DemoMyApplicationSingletonWin32\DemoMyApplicationSingletonWin32.vcxproj", "{9D6CF085-D64A-4767-ABD7-131114FC3F3A}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Demo04MyApplicationSingletonWin32", "Demo04MyApplicationSingletonWin32\Demo04MyApplicationSingletonWin32.vcxproj", "{9D6CF085-D64A-4767-ABD7-131114FC3F3A}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ButtonsAndTextboxesGE7", "ButtonsAndTextboxesGE7\ButtonsAndTextboxesGE7.vcxproj", "{3ED6FB78-D165-47F8-8CA1-4B77C746FD7E}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DemoGetScreenDataGE7", "DemoGetScreenDataGE7\DemoGetScreenDataGE7.vcxproj", "{85863B95-FAC3-4CD5-8747-752EEF3570BA}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Demo05GetScreenDataGE7", "Demo05GetScreenDataGE7\Demo05GetScreenDataGE7.vcxproj", "{85863B95-FAC3-4CD5-8747-752EEF3570BA}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DemoExceptionConsole", "DemoExceptionConsole\DemoExceptionConsole.vcxproj", "{FF4CAFB3-FC75-450A-A33D-2E858ECFD988}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Demo06ExceptionConsole", "Demo06ExceptionConsole\Demo06ExceptionConsole.vcxproj", "{FF4CAFB3-FC75-450A-A33D-2E858ECFD988}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DemoCustomExceptionConsole", "DemoCustomExceptionConsole\DemoCustomExceptionConsole.vcxproj", "{79CBD9A9-F14B-4436-A5E2-E6633655C815}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Demo06CustomExceptionConsole", "Demo06CustomExceptionConsole\Demo06CustomExceptionConsole.vcxproj", "{79CBD9A9-F14B-4436-A5E2-E6633655C815}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DemoExceptionsGE7", "DemoExceptionsGE7\DemoExceptionsGE7.vcxproj", "{E437F896-E1E6-4C68-A3A3-0D69EF977B81}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Demo06ExceptionsGE7", "Demo06ExceptionsGE7\Demo06ExceptionsGE7.vcxproj", "{E437F896-E1E6-4C68-A3A3-0D69EF977B81}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DemoPreprocessorConsole", "DemoPreprocessorConsole\DemoPreprocessorConsole.vcxproj", "{A2F31F79-238C-43D5-9515-4EFF6E014C73}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Demo07PreprocessorConsole", "Demo07PreprocessorConsole\Demo07PreprocessorConsole.vcxproj", "{A2F31F79-238C-43D5-9515-4EFF6E014C73}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DemoMyUniquePointerConsole", "DemoMyUniquePointerConsole\DemoMyUniquePointerConsole.vcxproj", "{142D8C21-1541-4008-898B-68813AC87449}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Demo08MyUniquePointerConsole", "Demo08MyUniquePointerConsole\Demo08MyUniquePointerConsole.vcxproj", "{142D8C21-1541-4008-898B-68813AC87449}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DemoRedAlertGE7", "DemoRedAlertGE7\DemoRedAlertGE7.vcxproj", "{A34CAE1F-09E1-4A0A-9237-CF5FCCF272E7}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Demo08RedAlertGE7", "Demo08RedAlertGE7\Demo08RedAlertGE7.vcxproj", "{A34CAE1F-09E1-4A0A-9237-CF5FCCF272E7}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DemoNumbersConsole", "DemoNumbersConsole\DemoNumbersConsole.vcxproj", "{2506E531-40A2-47EB-AEAC-862349E05AB1}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Demo09NumbersConsole", "Demo09NumbersConsole\Demo09NumbersConsole.vcxproj", "{2506E531-40A2-47EB-AEAC-862349E05AB1}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DemoCalculatorExceptionsGE7", "DemoCalculatorExceptionsGE7\DemoCalculatorExceptionsGE7.vcxproj", "{77AB4C64-3C1D-4500-B32C-BA99F35881B0}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Demo09CalculatorExceptionsGE7", "Demo09CalculatorExceptionsGE7\Demo09CalculatorExceptionsGE7.vcxproj", "{77AB4C64-3C1D-4500-B32C-BA99F35881B0}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DemoCalculatorSmartPointersGE7", "DemoCalculatorSmartPointersGE7\DemoCalculatorSmartPointersGE7.vcxproj", "{3736B2D1-11B1-419D-BCD6-118E7F5DC9B1}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Demo09CalculatorSmartPointersGE7", "Demo09CalculatorSmartPointersGE7\Demo09CalculatorSmartPointersGE7.vcxproj", "{3736B2D1-11B1-419D-BCD6-118E7F5DC9B1}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DemoCallableObjectsConsole", "DemoCallableObjectsConsole\DemoCallableObjectsConsole.vcxproj", "{BB447E42-5854-4102-9BD8-68ECFBAD6F9B}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Demo10CallableObjectsConsole", "Demo10CallableObjectsConsole\Demo10CallableObjectsConsole.vcxproj", "{BB447E42-5854-4102-9BD8-68ECFBAD6F9B}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DemoMyOwnAlgorithmFunctionConsole", "DemoMyOwnAlgorithmFunctionConsole\DemoMyOwnAlgorithmFunctionConsole.vcxproj", "{2D4C688D-9BF0-43F4-8AB7-7E3988975242}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Demo11MyOwnAlgorithmFunctionConsole", "Demo11MyOwnAlgorithmFunctionConsole\Demo11MyOwnAlgorithmFunctionConsole.vcxproj", "{2D4C688D-9BF0-43F4-8AB7-7E3988975242}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DemoSTLAlgorithmsConsole", "DemoSTLAlgorithmsConsole\DemoSTLAlgorithmsConsole.vcxproj", "{30B754D2-26F4-4974-8848-1C09FCF2FB96}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Demo11STLAlgorithmsConsole", "Demo11STLAlgorithmsConsole\Demo11STLAlgorithmsConsole.vcxproj", "{30B754D2-26F4-4974-8848-1C09FCF2FB96}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DemoFileSystemConsole", "DemoFileSystemConsole\DemoFileSystemConsole.vcxproj", "{05258BE7-836E-4AA0-8DAC-A649B7F3A5FF}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Demo12FileSystemConsole", "Demo12FileSystemConsole\Demo12FileSystemConsole.vcxproj", "{05258BE7-836E-4AA0-8DAC-A649B7F3A5FF}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DetectShapeOnScreenGE7", "DetectShapeOnScreenGE7\DetectShapeOnScreenGE7.vcxproj", "{47446730-C569-46BC-8440-6B8FB1A49282}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ExamPrepQuestion4GE7", "ExamPrepQuestion4GE7\ExamPrepQuestion4GE7.vcxproj", "{D7313D89-A4D0-4977-A7F6-BE3E9C2C8848}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DemoEndianTestConsole", "DemoEndianTestConsole\DemoEndianTestConsole.vcxproj", "{00FF531D-FFF8-4FF0-BDC9-BF358E401246}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Demo12EndianTestConsole", "Demo12EndianTestConsole\Demo12EndianTestConsole.vcxproj", "{00FF531D-FFF8-4FF0-BDC9-BF358E401246}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BinaryReaderWriterConsole", "BinaryReaderWriterConsole\BinaryReaderWriterConsole.vcxproj", "{A3DC34D5-9D6A-4863-90BB-8EA926B4707D}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BinaryObjConsole", "BinaryObjConsole\BinaryObjConsole.vcxproj", "{D7543911-A5DE-487C-95FB-68435E75E234}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DemoSentenceIteratorConsole", "DemoSentenceIteratorConsole\DemoSentenceIteratorConsole.vcxproj", "{65C4E563-B297-4DB8-97C0-AA8FEA6C42A5}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Demo03SentenceIteratorConsole", "Demo03SentenceIteratorConsole\Demo03SentenceIteratorConsole.vcxproj", "{65C4E563-B297-4DB8-97C0-AA8FEA6C42A5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

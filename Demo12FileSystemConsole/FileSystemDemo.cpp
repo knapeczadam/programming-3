@@ -31,9 +31,9 @@ void example1() {
 	toWrite.y = 5.1f;
 	toWrite.z = 9.1f;
 
-	if (std::ofstream temp{ "test2.bin", std::ios::binary };  temp.is_open()) {
-		temp << toWrite.x << toWrite.y << toWrite.z;
-		//temp.write(reinterpret_cast<const char*>(&toWrite), sizeof(toWrite));
+	if (std::ofstream temp{ "test.bin", std::ios::binary };  temp.is_open()) {
+		// temp << toWrite.x << toWrite.y << toWrite.z;
+		temp.write(reinterpret_cast<const char*>(&toWrite), sizeof(toWrite));
 		temp.close();
 	}
 	else
@@ -98,17 +98,17 @@ void example3()
 struct TeleportLocation
 {
 	bool isActive;
-	//uint8_t value;     //uncomment for #3
-	//bool isVisible;	 //uncomment for #2
-	//uint16_t strength; //uncomment for #2
+	uint8_t value;     //uncomment for #3
+	// bool isVisible;	 //uncomment for #2
+	// uint16_t strength; //uncomment for #2
 	float x, y, z;
 };
 
 void example4()
 {
-	TeleportLocation spawnPoint{ true, 1, 2, 3 };
-	//TeleportLocation spawnPoint{ true, true, 0xADDE, 0.f, 0.f, 0.f }; #2
-	//TeleportLocation spawnPoint{ true, 0xEE, 0.f, 0.f, 0.f };         #3
+	// TeleportLocation spawnPoint{ true, 1, 2, 3 };
+	// TeleportLocation spawnPoint{ true, true, 0xADDE, 0.f, 0.f, 0.f }; //#2
+	TeleportLocation spawnPoint{ true, 0xEE, 0.f, 0.f, 0.f };        // #3
 	cout << "size of bool: " << sizeof(bool) << endl;
 	cout << "size of float: " << sizeof(float) << endl;
 	cout << "expected size of TeleportLocation: " << sizeof(bool) + 3 * sizeof(float) << endl;
@@ -214,11 +214,11 @@ void example6()
 }
 
 int main() {
-	example1();
-	example2();
-	example2b();
-	example3();
-	example4();
-	example5();
+	// example1();
+	// example2();
+	// example2b();
+	// example3();
+	// example4();
+	// example5();
 	example6();
 }
