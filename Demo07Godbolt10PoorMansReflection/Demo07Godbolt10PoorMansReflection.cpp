@@ -25,6 +25,7 @@ constexpr auto type_name() {
 int& foo_lref();
 int&& foo_rref();
 int foo_value();
+void close_file(std::FILE* fp);
 
 int main() {
   int i = 0;
@@ -39,4 +40,7 @@ int main() {
   std::cout << "decltype(foo_lref()) is " << type_name<decltype(foo_lref())>() << '\n';
   std::cout << "decltype(foo_rref()) is " << type_name<decltype(foo_rref())>() << '\n';
   std::cout << "decltype(foo_value()) is " << type_name<decltype(foo_value())>() << '\n';
+  std::cout << "decltype(close_file(nullptr)) is " << type_name<decltype(close_file(nullptr))>() << '\n';
+  std::cout << "decltype(close_file) is " << type_name<decltype(close_file)>() << '\n';
+  std::cout << "decltype(&close_file) is " << type_name<decltype(&close_file)>() << '\n';
 }
