@@ -197,6 +197,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Demo08Godbolt04CircularRefe
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Demo08Godbolt05WeakPtr", "Demo08Godbolt05WeakPtr\Demo08Godbolt05WeakPtr.vcxproj", "{6B302AC7-84B2-4EE0-B568-296BB0D5F528}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RandomWindowSizeWin32", "RandomWindowSizeWin32\RandomWindowSizeWin32.vcxproj", "{55FBC9EC-289C-47CE-97DF-25591184A838}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -981,6 +983,14 @@ Global
 		{6B302AC7-84B2-4EE0-B568-296BB0D5F528}.Release|x64.Build.0 = Release|x64
 		{6B302AC7-84B2-4EE0-B568-296BB0D5F528}.Release|x86.ActiveCfg = Release|Win32
 		{6B302AC7-84B2-4EE0-B568-296BB0D5F528}.Release|x86.Build.0 = Release|Win32
+		{55FBC9EC-289C-47CE-97DF-25591184A838}.Debug|x64.ActiveCfg = Debug|x64
+		{55FBC9EC-289C-47CE-97DF-25591184A838}.Debug|x64.Build.0 = Debug|x64
+		{55FBC9EC-289C-47CE-97DF-25591184A838}.Debug|x86.ActiveCfg = Debug|Win32
+		{55FBC9EC-289C-47CE-97DF-25591184A838}.Debug|x86.Build.0 = Debug|Win32
+		{55FBC9EC-289C-47CE-97DF-25591184A838}.Release|x64.ActiveCfg = Release|x64
+		{55FBC9EC-289C-47CE-97DF-25591184A838}.Release|x64.Build.0 = Release|x64
+		{55FBC9EC-289C-47CE-97DF-25591184A838}.Release|x86.ActiveCfg = Release|Win32
+		{55FBC9EC-289C-47CE-97DF-25591184A838}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
