@@ -24,6 +24,8 @@
 #include <stdlib.h>
 #include <tchar.h>
 #include <Mmsystem.h>					// winmm.lib header, used for playing sound
+#include <ObjIdl.h>                     // used for IStream interface
+#include <gdiplus.h>                    // gdiplus.lib header, used for drawing bitmaps 
 #undef MessageBox
 
 #include "AbstractGame.h"				// base for all games
@@ -38,6 +40,7 @@
 //-----------------------------------------------------------------
 #pragma comment(lib, "msimg32.lib")		// used for transparency
 #pragma comment(lib, "winmm.lib")		// used for sound
+#pragma comment(lib, "gdiplus.lib")	    // used for drawing bitmaps
 
 //-----------------------------------------------------------------
 // GameEngine Defines
@@ -181,21 +184,23 @@ private:
 	POINT		AngleToPoint(int x, int y, int width, int height, int angle)		const;
 
 	// Member Variables
-	HINSTANCE           m_hInstance{};
-	HWND                m_Window{};
-	tstring*            m_TitlePtr{};
-	WORD                m_Icon{}, m_SmallIcon{};
-	int                 m_Width{}, m_Height{};
-	int                 m_FrameDelay{};
-	bool				m_RunGameLoop{};
-	HANDLE				m_hKeybThread{};
-	DWORD				m_dKeybThreadID{};
-	bool				m_KeybRunning{};
-	TCHAR*				m_KeyListPtr{};
-	unsigned int		m_KeybMonitor{};
-	AbstractGame*		m_GamePtr{};
-	bool				m_PaintDoublebuffered{};
-	bool				m_Fullscreen{};
+	HINSTANCE                    m_hInstance{};
+	HWND                         m_Window{};
+	tstring*                     m_TitlePtr{};
+	WORD                         m_Icon{}, m_SmallIcon{};
+	int                          m_Width{}, m_Height{};
+	int                          m_FrameDelay{};
+	bool				         m_RunGameLoop{};
+	HANDLE				         m_hKeybThread{};
+	DWORD				         m_dKeybThreadID{};
+	bool				         m_KeybRunning{};
+	TCHAR*				         m_KeyListPtr{};
+	unsigned int		         m_KeybMonitor{};
+	AbstractGame*		         m_GamePtr{};
+	bool				         m_PaintDoublebuffered{};
+	bool				         m_Fullscreen{};
+	ULONG_PTR			         m_GdiplusToken{};
+	Gdiplus::GdiplusStartupInput m_GdiplusStartupInput{};
 
 	// Draw assistance variables
 	HDC					m_HdcDraw{};
@@ -523,31 +528,34 @@ public:
 	Bitmap& operator=(const Bitmap& other) = delete;
 	Bitmap& operator=(Bitmap&& other) noexcept = delete;
 
-	bool		Exists()								const;
-	HBITMAP		GetHandle()								const;
-	int			GetWidth()								const;
-	int			GetHeight()								const;
-	void		SetTransparencyColor(COLORREF color);
-	COLORREF	GetTransparencyColor()					const;
-	void		SetOpacity(int);
-	int			GetOpacity()							const;
-	bool		IsTarga()								const;
-	bool		HasAlphaChannel()						const;
-	bool		SaveToFile(tstring fileName)			const;
+	bool			 Exists()								const;
+	HBITMAP			 GetHandle()							const;
+	int				 GetWidth()								const;
+	int				 GetHeight()							const;
+	void			 SetTransparencyColor(COLORREF color);
+	COLORREF		 GetTransparencyColor()					const;
+	void			 SetOpacity(int);
+	int				 GetOpacity()							const;
+	bool		     IsTarga()								const;
+	bool		     IsPng()								const;
+	bool		     HasAlphaChannel()						const;
+	bool		     SaveToFile(tstring fileName)			const;
+	Gdiplus::Bitmap* GetGdiPlusBitmap()						const;
 	
 private:	
 	// -------------------------
 	// Datamembers
 	// -------------------------
-	static int		m_Nr;
-	HBITMAP			m_hBitmap;
-	COLORREF		m_TransparencyKey;
-	int				m_Opacity;
-	bool			m_IsTarga;
-	bool 		    m_IsPng;
-	unsigned char*	m_PixelsPtr; 
-	bool			m_Exists;
-	bool			m_HasAlphaChannel;
+	static int       m_Nr;
+	HBITMAP          m_hBitmap;
+	COLORREF         m_TransparencyKey;
+	int              m_Opacity;
+	bool             m_IsTarga;
+	bool             m_IsPng;
+	unsigned char*   m_PixelsPtr; 
+	bool             m_Exists;
+	bool             m_HasAlphaChannel;
+	Gdiplus::Bitmap* m_GdiPlusBitmapPtr;
 
 	// -------------------------
 	// Methods

@@ -58,6 +58,10 @@ GameEngine::GameEngine() :	m_hInstance(NULL),
 							m_WindowRegionPtr(0)
 {
 	m_hKeybThread = CreateThread(nullptr, NULL, (LPTHREAD_START_ROUTINE) ::KeybThreadProc, this, NULL, &m_dKeybThreadID);
+
+	// Initialize GDI+
+	Gdiplus::Status status = Gdiplus::GdiplusStartup(&m_GdiplusToken, &m_GdiplusStartupInput, NULL);
+	if (status != Gdiplus::Ok) MessageBox(_T("GdiplusStartup failed"));
 }
 
 GameEngine::~GameEngine()
@@ -83,6 +87,9 @@ GameEngine::~GameEngine()
 
 	// delete the game object
 	delete m_GamePtr;
+
+	// clean up GDI+
+	Gdiplus::GdiplusShutdown(m_GdiplusToken);
 }
 
 //-----------------------------------------------------------------
@@ -1094,8 +1101,17 @@ bool GameEngine::DrawBitmap(Bitmap* bitmapPtr, int x, int y, RECT rect, HDC hDC)
 
 	if (bitmapPtr->HasAlphaChannel())
 	{
-		BLENDFUNCTION blender={AC_SRC_OVER, 0, (BYTE) (2.55 * opacity), AC_SRC_ALPHA}; // blend function combines opacity and pixel based transparency
-		AlphaBlend(hDC, x, y, rect.right - rect.left, rect.bottom - rect.top, hdcMem, rect.left, rect.top, rect.right - rect.left, rect.bottom - rect.top, blender);
+		if (bitmapPtr->IsPng())
+		{
+			Gdiplus::Bitmap* bitmap = bitmapPtr->GetGdiPlusBitmap();
+			Gdiplus::Graphics graphics(hDC);
+			graphics.DrawImage(bitmap, x, y, bitmap->GetWidth(), bitmap->GetHeight());
+		}
+		else
+		{
+			BLENDFUNCTION blender={AC_SRC_OVER, 0, (BYTE) (2.55 * opacity), AC_SRC_ALPHA}; // blend function combines opacity and pixel based transparency
+			AlphaBlend(hDC, x, y, rect.right - rect.left, rect.bottom - rect.top, hdcMem, rect.left, rect.top, rect.right - rect.left, rect.bottom - rect.top, blender);
+		}
 	}
 	else TransparentBlt(hDC, x, y, rect.right - rect.left, rect.bottom - rect.top, hdcMem, rect.left, rect.top, rect.right - rect.left, rect.bottom - rect.top, bitmapPtr->GetTransparencyColor());
 
@@ -1402,6 +1418,7 @@ Bitmap::Bitmap(const tstring& nameRef, bool createAlphaChannel) : m_hBitmap(0), 
 	if (len > 4 && nameRef.substr(len-4) == _T(".tga")) 
 	{
 		m_IsTarga = true;
+		m_IsPng = false;
 		m_HasAlphaChannel = true;
 		TargaLoader* targa = new TargaLoader();
 
@@ -1413,9 +1430,24 @@ Bitmap::Bitmap(const tstring& nameRef, bool createAlphaChannel) : m_hBitmap(0), 
 		
 		delete targa;
 	}
+	else if (len > 4 && nameRef.substr(len-4) == _T(".png"))
+	{
+		m_IsPng = true;
+		m_IsTarga = false;
+		m_HasAlphaChannel = true;
+
+		m_GdiPlusBitmapPtr = Gdiplus::Bitmap::FromFile(nameRef.c_str());
+		
+		if (m_GdiPlusBitmapPtr->GetLastStatus() == Gdiplus::Ok)
+		{
+			m_GdiPlusBitmapPtr->GetHBITMAP(Gdiplus::Color(0, 0, 0, 0), &m_hBitmap);
+			if (m_hBitmap != 0) m_Exists = true;
+		}
+	}
 	// else load as bitmap
 	else 
 	{
+		m_IsPng = false;
 		m_IsTarga = false;
 		m_HasAlphaChannel = createAlphaChannel;
 		m_hBitmap = (HBITMAP)LoadImage(GameEngine::GetSingleton()->GetInstance(), nameRef.c_str(), IMAGE_BITMAP, 0, 0, LR_LOADFROMFILE);
@@ -1430,7 +1462,6 @@ Bitmap::Bitmap(int IDBitmap, const tstring& typeRef, bool createAlphaChannel): m
 	if (typeRef == _T("BITMAP"))
 	{	
 		m_IsTarga = false;
-		m_IsPng = false;
 		m_HasAlphaChannel = createAlphaChannel;
 
 		m_hBitmap = LoadBitmap(GameEngine::GetSingleton()->GetInstance(), MAKEINTRESOURCE(IDBitmap));
@@ -1442,7 +1473,6 @@ Bitmap::Bitmap(int IDBitmap, const tstring& typeRef, bool createAlphaChannel): m
 	else if (typeRef == _T("TGA"))
 	{
 		m_IsTarga = true;
-		m_IsPng = false;
 		m_HasAlphaChannel = true;
 
 		tstringstream buffer;
@@ -1554,6 +1584,8 @@ Bitmap::~Bitmap()
 	}
 
 	DeleteObject(m_hBitmap);
+
+	delete m_GdiPlusBitmapPtr;
 }
 
 bool Bitmap::Exists() const
@@ -1665,6 +1697,11 @@ bool Bitmap::IsTarga() const
 	return m_IsTarga;
 }
 
+bool Bitmap::IsPng() const
+{
+	return m_IsPng;
+}
+
 bool Bitmap::HasAlphaChannel() const
 {
 	return m_HasAlphaChannel;
@@ -1718,6 +1755,11 @@ bool Bitmap::SaveToFile(tstring fileName) const
 	DeleteDC(hScreenDC);
 
 	return result;
+}
+
+Gdiplus::Bitmap* Bitmap::GetGdiPlusBitmap() const
+{
+	return m_GdiPlusBitmapPtr;
 }
 
 //-----------------------------------------------------------------

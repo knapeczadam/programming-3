@@ -76,6 +76,7 @@ void X::Paint(RECT rect)
 		GAME_ENGINE->DrawBitmap(m_BmpPtr.get(), (GAME_ENGINE->GetWidth() - bmpWidth) / 2, (GAME_ENGINE->GetHeight() - bmpHeight) / 2);
 		
 	}
+    GAME_ENGINE->DrawSolidBackground(RGB(0, 50, 50));
 }
 
 void X::Tick()
