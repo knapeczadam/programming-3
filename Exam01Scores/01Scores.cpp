@@ -4,7 +4,6 @@
 #include <vector>
 #include <algorithm>
 #include <ranges>
-#include <ranges>
 #include <regex>
 #include <optional>
 #include <filesystem>
@@ -16,7 +15,7 @@ struct StudentScoreIn
 {
     std::string lastName;
     std::string firstName;
-    int score;
+    int         score;
 };
 
 //-----------------------------------------------------------------
@@ -26,7 +25,7 @@ struct StudentScoreOut
 {
     std::string lastName;
     std::string firstName;
-    char score;
+    char        score;
 };
 
 bool IsInteger(const std::string& str, int& number)
@@ -82,6 +81,8 @@ std::pair<bool, std::pair<std::optional<int>, std::optional<float>>> IsNumber(co
         {
             return {true, {number1, std::nullopt}};
         }
+        
+        // floating point
         float number2;
         if (IsFloatingPoint(str, number2))
         {
@@ -106,9 +107,9 @@ bool IsValidStudentScore(const std::string& in, StudentScoreIn& studentScore)
         result.push_back(substr);
     }
     
-    const std::string lastName = result[0];
+    const std::string lastName  = result[0];
     const std::string firstName = result[1];
-    const std::string scoreStr = result[2];
+    const std::string scoreStr  = result[2];
     
     int score;
     if (not IsInteger(scoreStr, score)) return false;
@@ -193,9 +194,9 @@ int main()
     for (const auto& student : studentScoresIn)
     {
         StudentScoreOut studentScoreOut;
-        studentScoreOut.lastName = student.lastName;
+        studentScoreOut.lastName  = student.lastName;
         studentScoreOut.firstName = student.firstName;
-        studentScoreOut.score = static_cast<char>(student.score);
+        studentScoreOut.score     = static_cast<char>(student.score);
         studentScoresOut.push_back(studentScoreOut);
     }
 
