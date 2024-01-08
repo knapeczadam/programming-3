@@ -248,6 +248,12 @@ void GameEngine::ShowMousePointer(bool value) const
 	InvalidateRect(m_Window, 0, true);
 }
 
+bool GameEngine::FileExists(const std::wstring& path) const
+{
+	DWORD dwAttrib = GetFileAttributes(path.c_str());
+	return (dwAttrib != INVALID_FILE_ATTRIBUTES && !(dwAttrib & FILE_ATTRIBUTE_DIRECTORY));
+}
+
 bool GameEngine::SetWindowRegion(const HitRegion* regionPtr)
 {
 	if (m_Fullscreen) return false;
@@ -1412,11 +1418,15 @@ Bitmap::Bitmap(HBITMAP hBitmap) : m_TransparencyKey(-1), m_Opacity(100), m_Exist
 
 Bitmap::Bitmap(const tstring& nameRef, bool createAlphaChannel) : m_hBitmap(0), m_TransparencyKey(-1), m_Opacity(100), m_PixelsPtr(0), m_Exists(false)
 {
-	// check if the file to load is a targa
-	size_t len = nameRef.length(); 
+	if (not GAME_ENGINE->FileExists(nameRef)) throw BitmapMissingFileException(nameRef);	
+	
+	size_t len = nameRef.length();
+	m_SupportedFormat = false;
 
+	// check if the file to load is a targa
 	if (len > 4 && nameRef.substr(len-4) == _T(".tga")) 
 	{
+		m_SupportedFormat = true;
 		m_IsTarga = true;
 		m_IsPng = false;
 		m_HasAlphaChannel = true;
@@ -1432,6 +1442,7 @@ Bitmap::Bitmap(const tstring& nameRef, bool createAlphaChannel) : m_hBitmap(0), 
 	}
 	else if (len > 4 && nameRef.substr(len-4) == _T(".png"))
 	{
+		m_SupportedFormat = true;
 		m_IsPng = true;
 		m_IsTarga = false;
 		m_HasAlphaChannel = true;
@@ -1446,22 +1457,29 @@ Bitmap::Bitmap(const tstring& nameRef, bool createAlphaChannel) : m_hBitmap(0), 
 		}
 	}
 	// else load as bitmap
-	else 
+	else if (len > 4 && nameRef.substr(len-4) == _T(".bmp"))
 	{
+		m_SupportedFormat = true;
 		m_IsPng = false;
 		m_IsTarga = false;
 		m_HasAlphaChannel = createAlphaChannel;
 		m_hBitmap = (HBITMAP)LoadImage(GameEngine::GetSingleton()->GetInstance(), nameRef.c_str(), IMAGE_BITMAP, 0, 0, LR_LOADFROMFILE);
 		if (m_hBitmap != 0) m_Exists = true;
 	}
+	
+	if (not m_SupportedFormat) throw BitmapUnsupportedFormatException(nameRef);
 
 	if (m_IsTarga || createAlphaChannel) LoadBitInfo();
 }
 
 Bitmap::Bitmap(int IDBitmap, const tstring& typeRef, bool createAlphaChannel): m_TransparencyKey(-1), m_Opacity(100), m_Exists(false)
 {
+	if (not GAME_ENGINE->FileExists(typeRef)) throw BitmapMissingFileException(typeRef);
+
+	m_SupportedFormat = false;
 	if (typeRef == _T("BITMAP"))
-	{	
+	{
+		m_SupportedFormat = true;
 		m_IsTarga = false;
 		m_HasAlphaChannel = createAlphaChannel;
 
@@ -1473,6 +1491,7 @@ Bitmap::Bitmap(int IDBitmap, const tstring& typeRef, bool createAlphaChannel): m
 	}
 	else if (typeRef == _T("TGA"))
 	{
+		m_SupportedFormat = true;
 		m_IsTarga = true;
 		m_HasAlphaChannel = true;
 
@@ -1492,6 +1511,8 @@ Bitmap::Bitmap(int IDBitmap, const tstring& typeRef, bool createAlphaChannel): m
 			m_hBitmap = CreateBitmap(targa->GetWidth(), targa->GetHeight(), 1, targa->GetBPP(), (void*)targa->GetImg());
 			if (m_hBitmap != 0) m_Exists = true;
 		}
+		
+		if (not m_SupportedFormat) throw BitmapUnsupportedFormatException(fileName);
 		
 		delete targa;
 		
