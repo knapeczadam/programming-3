@@ -51,6 +51,7 @@ void X::Start()
 	// Insert the code that needs to be executed at the start of the game
 	m_TxtUPtr = std::make_unique<TextBox>();
 	m_TxtUPtr->SetBounds(25, 25, 100, 25);
+	m_TxtUPtr->AddActionListener(this);
 	m_TxtUPtr->Show();
 	
 	m_BtnUniqueUPtr = std::make_unique<Button>(_T("Load Bitmap"));
@@ -166,7 +167,7 @@ void X::KeyPressed(TCHAR cKey)
 void X::CallAction(Caller* callerPtr)
 {
 	// Insert the code that needs to be executed when a Caller has to perform an action
-	if (callerPtr == m_BtnUniqueUPtr.get()) {
+	if (callerPtr == m_BtnUniqueUPtr.get() or callerPtr == m_TxtUPtr.get()) {
 		m_Message = m_TxtUPtr->GetText();
         try
         {
