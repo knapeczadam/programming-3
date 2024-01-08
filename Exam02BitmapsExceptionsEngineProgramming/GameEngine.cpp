@@ -248,7 +248,7 @@ void GameEngine::ShowMousePointer(bool value) const
 	InvalidateRect(m_Window, 0, true);
 }
 
-bool GameEngine::FileExists(const std::wstring& path) const
+bool GameEngine::FileExists(const tstring& path) const
 {
 	DWORD dwAttrib = GetFileAttributes(path.c_str());
 	return (dwAttrib != INVALID_FILE_ATTRIBUTES && !(dwAttrib & FILE_ATTRIBUTE_DIRECTORY));
