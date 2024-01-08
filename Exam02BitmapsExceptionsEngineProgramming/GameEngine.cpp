@@ -1436,7 +1436,8 @@ Bitmap::Bitmap(const tstring& nameRef, bool createAlphaChannel) : m_hBitmap(0), 
 		m_IsTarga = false;
 		m_HasAlphaChannel = true;
 
-		m_GdiPlusBitmapPtr = Gdiplus::Bitmap::FromFile(nameRef.c_str());
+		m_GdiPlusBitmapPtr.reset();
+		m_GdiPlusBitmapPtr = std::make_unique<Gdiplus::Bitmap>(nameRef.c_str());
 		
 		if (m_GdiPlusBitmapPtr->GetLastStatus() == Gdiplus::Ok)
 		{
@@ -1584,8 +1585,6 @@ Bitmap::~Bitmap()
 	}
 
 	DeleteObject(m_hBitmap);
-
-	delete m_GdiPlusBitmapPtr;
 }
 
 bool Bitmap::Exists() const
@@ -1759,7 +1758,7 @@ bool Bitmap::SaveToFile(tstring fileName) const
 
 Gdiplus::Bitmap* Bitmap::GetGdiPlusBitmap() const
 {
-	return m_GdiPlusBitmapPtr;
+	return m_GdiPlusBitmapPtr.get();
 }
 
 //-----------------------------------------------------------------

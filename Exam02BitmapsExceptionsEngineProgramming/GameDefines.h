@@ -6,6 +6,7 @@
 #include <iostream>
 #include <fstream>
 #include <regex>
+#include <memory>
 #include <tchar.h>
 
 #ifdef _UNICODE								// extra unicode defines

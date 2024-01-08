@@ -546,16 +546,16 @@ private:
 	// -------------------------
 	// Datamembers
 	// -------------------------
-	static int       m_Nr;
-	HBITMAP          m_hBitmap;
-	COLORREF         m_TransparencyKey;
-	int              m_Opacity;
-	bool             m_IsTarga;
-	bool             m_IsPng;
-	unsigned char*   m_PixelsPtr; 
-	bool             m_Exists;
-	bool             m_HasAlphaChannel;
-	Gdiplus::Bitmap* m_GdiPlusBitmapPtr;
+	static int                       m_Nr;
+	HBITMAP                          m_hBitmap;
+	COLORREF                         m_TransparencyKey;
+	int                              m_Opacity;
+	bool                             m_IsTarga;
+	bool                             m_IsPng;
+	unsigned char*                   m_PixelsPtr; 
+	bool                             m_Exists;
+	bool                             m_HasAlphaChannel;
+	std::unique_ptr<Gdiplus::Bitmap> m_GdiPlusBitmapPtr;
 
 	// -------------------------
 	// Methods
