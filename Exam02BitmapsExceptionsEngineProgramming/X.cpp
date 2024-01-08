@@ -68,6 +68,7 @@ void X::End()
 void X::Paint(RECT rect)
 {
 	// Insert paint code
+    GAME_ENGINE->DrawSolidBackground(RGB(0, 50, 50));
 	if (m_BmpPtr)
 	{
 		const auto bmpWidth = m_BmpPtr->GetWidth();
@@ -76,7 +77,6 @@ void X::Paint(RECT rect)
 		GAME_ENGINE->DrawBitmap(m_BmpPtr.get(), (GAME_ENGINE->GetWidth() - bmpWidth) / 2, (GAME_ENGINE->GetHeight() - bmpHeight) / 2);
 		
 	}
-    GAME_ENGINE->DrawSolidBackground(RGB(0, 50, 50));
 }
 
 void X::Tick()
@@ -169,25 +169,9 @@ void X::CallAction(Caller* callerPtr)
 {
 	// Insert the code that needs to be executed when a Caller has to perform an action
 	if (callerPtr == m_BtnUniqueUPtr.get() or callerPtr == m_TxtUPtr.get()) {
-		m_Message = m_TxtUPtr->GetText();
         try
         {
-        	// check if file exists
-        	if (not std::filesystem::exists(m_Message))
-			{
-				throw BitmapMissingFileException(m_Message);
-			}
-			if (IsValidImageFileName(m_Message))
-			{
-				// load bitmap
-				// release old bitmap
-				m_BmpPtr.reset();
-				m_BmpPtr = std::make_unique<Bitmap>(m_Message, true);
-			}
-			else
-			{
-				throw BitmapUnsupportedFormatException(m_Message);
-			}
+        	m_BmpPtr = std::make_unique<Bitmap>(m_TxtUPtr->GetText());
         }
 		catch (const BitmapMissingFileException& e)
 		{
@@ -197,9 +181,6 @@ void X::CallAction(Caller* callerPtr)
         {
 			GAME_ENGINE->MessageBox(e.GetMessage());
         }
-		
-		
-		
     }
 }
 

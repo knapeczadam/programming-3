@@ -60,13 +60,7 @@ private:
 	// -------------------------
 	// Datamembers
 	// -------------------------
-	std::unique_ptr<Button> m_BtnUniqueUPtr;
-
+	std::unique_ptr<Button>  m_BtnUniqueUPtr;
 	std::unique_ptr<TextBox> m_TxtUPtr;
-
-	std::unique_ptr<Bitmap> m_BmpPtr;
-	
-	tstring m_Message;
-
-
+	std::unique_ptr<Bitmap>  m_BmpPtr;
 };

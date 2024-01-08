@@ -89,7 +89,8 @@ public:
 	bool		GoFullscreen();		
 	bool		GoWindowedMode();		
 	bool		IsFullscreen() const;		
-	void		ShowMousePointer(bool value) const;	
+	void		ShowMousePointer(bool value) const;
+	bool        FileExists(const tstring& path) const;
 
 	LRESULT     HandleEvent(HWND hWindow, UINT msg, WPARAM wParam, LPARAM lParam);
 	bool		IsKeyDown(int vKey) const;
@@ -555,6 +556,7 @@ private:
 	unsigned char*                   m_PixelsPtr; 
 	bool                             m_Exists;
 	bool                             m_HasAlphaChannel;
+	bool                             m_SupportedFormat;
 	std::unique_ptr<Gdiplus::Bitmap> m_GdiPlusBitmapPtr;
 
 	// -------------------------
