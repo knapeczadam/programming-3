@@ -28,6 +28,11 @@ struct StudentScoreOut
     char        score;
 };
 
+bool IsName(const std::string& name)
+{
+    return std::regex_match(name, std::regex{"[A-Za-z]+"});
+}
+
 bool IsInteger(const std::string& str, int& number)
 {
     try
@@ -110,6 +115,10 @@ bool IsValidStudentScore(const std::string& in, StudentScoreIn& studentScore)
     const std::string lastName  = result[0];
     const std::string firstName = result[1];
     const std::string scoreStr  = result[2];
+
+    // Validate lastName, firstName, and score
+    if (not IsName(lastName))  return false;
+    if (not IsName(firstName)) return false;
     
     int score;
     if (not IsInteger(scoreStr, score)) return false;
