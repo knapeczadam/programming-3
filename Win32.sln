@@ -199,9 +199,9 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Demo08Godbolt05WeakPtr", "D
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RandomWindowSizeWin32", "RandomWindowSizeWin32\RandomWindowSizeWin32.vcxproj", "{55FBC9EC-289C-47CE-97DF-25591184A838}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "01Scores", "01Scores\01Scores.vcxproj", "{276DEACE-908F-4A37-81CA-BEED831335EB}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Exam01Scores", "Exam01Scores\Exam01Scores.vcxproj", "{276DEACE-908F-4A37-81CA-BEED831335EB}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "02BitmapsExceptionsEngineProgramming", "02BitmapsExceptionsEngineProgramming\02BitmapsExceptionsEngineProgramming.vcxproj", "{A7AF4FA0-D15D-41E0-BD17-CC360D5EBBC1}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Exam02BitmapsExceptionsEngineProgramming", "Exam02BitmapsExceptionsEngineProgramming\Exam02BitmapsExceptionsEngineProgramming.vcxproj", "{A7AF4FA0-D15D-41E0-BD17-CC360D5EBBC1}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ConvertBmpToPngWin32", "ConvertBmpToPngWin32\ConvertBmpToPngWin32.vcxproj", "{4461BA60-C43B-4B3F-8AFC-91A5CF242E9F}"
 EndProject

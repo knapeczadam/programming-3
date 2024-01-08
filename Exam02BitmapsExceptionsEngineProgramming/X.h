@@ -64,8 +64,6 @@ private:
 
 	std::unique_ptr<TextBox> m_TxtUPtr;
 
-	std::unique_ptr<Font> m_FontUPtr;
-	
 	std::unique_ptr<Bitmap> m_BmpPtr;
 	
 	tstring m_Message;

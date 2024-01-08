@@ -57,9 +57,6 @@ void X::Start()
 	m_BtnUniqueUPtr->SetBounds(150, 25, 100, 25);
 	m_BtnUniqueUPtr->AddActionListener(this);
 	m_BtnUniqueUPtr->Show();
-	
-
-	m_FontUPtr = std::make_unique<Font>(_T("Verdana"), false, false, false, 25);
 }
 
 void X::End()
@@ -183,7 +180,7 @@ void X::CallAction(Caller* callerPtr)
 				// load bitmap
 				// release old bitmap
 				m_BmpPtr.reset();
-				m_BmpPtr = std::make_unique<Bitmap>(m_Message);
+				m_BmpPtr = std::make_unique<Bitmap>(m_Message, true);
 			}
 			else
 			{

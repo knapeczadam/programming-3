@@ -1466,34 +1466,6 @@ Bitmap::Bitmap(int IDBitmap, const tstring& typeRef, bool createAlphaChannel): m
 		
 		LoadBitInfo();
 	}
-	else if (typeRef == _T("PNG"))
-	{
-		m_IsTarga = false;
-		m_IsPng = true;
-		m_HasAlphaChannel = true;
-
-		tstringstream buffer;
-		buffer << "temp\\png";
-		buffer << m_Nr++;
-		buffer << ".png";
-
-		tstring fileName = buffer.str();
-
-		Extract(IDBitmap, _T("PNG"), fileName);
-
-		TargaLoader* targa = new TargaLoader();
-
-		if (targa->Load((TCHAR*) fileName.c_str()) == 1)
-		{
-			m_hBitmap = CreateBitmap(targa->GetWidth(), targa->GetHeight(), 1, targa->GetBPP(), (void*)targa->GetImg());
-			if (m_hBitmap != 0) m_Exists = true;
-		}
-		
-		delete targa;
-		
-		LoadBitInfo();
-
-	}
 }
 
 void Bitmap::LoadBitInfo()
