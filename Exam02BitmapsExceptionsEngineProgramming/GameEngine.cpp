@@ -1385,7 +1385,12 @@ bool Caller::RemoveListenerObject(const Callable* targetPtr)
 // set static datamember to zero
 int Bitmap::m_Nr = 0;
 
-BitmapUnsupportedFormatException::BitmapUnsupportedFormatException(const std::wstring& message)
+AbstractBitmapException::AbstractBitmapException(const tstring& message)
+	: m_Message(message)
+{
+}
+
+BitmapUnsupportedFormatException::BitmapUnsupportedFormatException(const tstring& message)
 	: AbstractBitmapException(message)
 {
 }
@@ -1398,7 +1403,7 @@ tstring BitmapUnsupportedFormatException::GetMessage() const
 	return buffer.str();
 }
 
-BitmapMissingFileException::BitmapMissingFileException(const std::wstring& message)
+BitmapMissingFileException::BitmapMissingFileException(const tstring& message)
 	: AbstractBitmapException(message)
 {
 }
@@ -2103,11 +2108,6 @@ LRESULT Audio::AudioProcStatic(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam
 		}
 	}
 	return 0;	
-}
-
-AbstractBitmapException::AbstractBitmapException(const std::wstring& message)
-	: m_Message(message)
-{
 }
 
 //-----------------------------------------------------------------

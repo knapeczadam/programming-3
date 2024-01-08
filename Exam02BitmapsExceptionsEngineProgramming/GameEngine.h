@@ -491,11 +491,18 @@ private:
 // Bitmap Class
 //-----------------------------------------------------------------
 
+// Bitmap Exceptions
 class AbstractBitmapException
 {
 public:
 	AbstractBitmapException(const tstring& message);
 	virtual ~AbstractBitmapException() = default;
+	
+	AbstractBitmapException(const AbstractBitmapException& other)                = delete;
+	AbstractBitmapException(AbstractBitmapException&& other) noexcept            = delete;
+	AbstractBitmapException& operator=(const AbstractBitmapException& other)     = delete;
+	AbstractBitmapException& operator=(AbstractBitmapException&& other) noexcept = delete;
+	
 	virtual tstring GetMessage() const = 0;
 	
 protected:
@@ -514,6 +521,8 @@ public:
 	BitmapMissingFileException(const tstring& message);
 	tstring GetMessage() const override;
 };
+
+// Bitmap class
 class Bitmap final
 {
 public:
