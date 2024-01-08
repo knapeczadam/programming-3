@@ -122,6 +122,7 @@ bool IsValidStudentScore(const std::string& in, StudentScoreIn& studentScore)
     
     int score;
     if (not IsInteger(scoreStr, score)) return false;
+    if (score < 0 or score > 20) return false;
     
     studentScore = {lastName, firstName, score};
 
